@@ -1,0 +1,10 @@
+<p>eaters new</p>
+<h3>please confirm the information below and click submit</h3>
+
+<%= form_for Eater.new do |f| %>
+    Cooker <%= f.integer :subscribed_to %> 
+<%= f.submit "Sign up" %>
+ <% end %>
+  
+
+<p>submit button that creates new eater and redirects to eater/show</p>
