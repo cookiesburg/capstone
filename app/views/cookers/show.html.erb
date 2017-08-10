@@ -1,3 +1,34 @@
-<h1>this is the cooker show</h1>
+<body id="cooker-home">
+  
+<%= render partial: "partials/nav" %>
+  <br/>
+  <br/>
+  <br/>
+<%= render partial: "partials/cooker_home", locals: {cooker: current_user.cooker}%>
+  <br/>
+  <%= link_to "edit profile page", edit_cooker_path(current_user.cooker.id), method: :get %>
+  <br/>
+  <div class="container" id="cooker-page">
+    <div class="row">
+      <div class ="col-lg-8 col-md-8 col-sm-8">
+        <div class="list-of-eaters">
+          <div class="row">
+          <h3>Mouths to Feed: <%=Eater.all.where(cooker_id: current_user.id).count%></h3>
+            <p>list of eaters</p>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
 
-<%= link_to "logout", destroy_user_session_path, method: :delete %>

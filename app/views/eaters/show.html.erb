@@ -1,1 +1,44 @@
-<h2>eaters show</h2>
+<body id="eater-home">
+  
+<%= render :partial => "partials/nav" %>
+
+  <div class="page-header">
+    <h2>welcome <%=current_user.username%> <small><%=  %></small></h1>
+  </div>
+  
+  <br/>
+  <br/>
+  <br/>
+
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-1"></div>
+
+      <div class="col-md-10" id="search-area">
+          <%= form_tag("/eater", method: "get") do %>
+            <%= label_tag(:price, "Select Price Range:") %>
+            <%= select_tag 'price', options_for_select([['under 40'],['40-60'],['over 60']]) %>
+            <%= label_tag(:diet, "Dietary Restrictions:") %>
+            <%= select_tag 'diet', options_for_select([['none'],['vegetarian'],['vegan'],['pescatarian']]) %>
+            <%= label_tag(:location, "Cooker Location:") %>
+            <%= select_tag 'location', options_for_select([['El Poblado'],['Centro'],['Envigado'],['Laurales']]) %>
+            <%= label_tag(:delivery, "With Delivery Option?:") %>
+            <%= select_tag 'delivery', options_for_select([['Yes'],['No']]) %>
+            <%= submit_tag("Filter") %>
+          <% end %>
+      </div>
+
+      <div class="col-md-1"></div>
+    </div>
+  </div>
+       
+        <div class="search-results">
+          <% @cookers.each do |cook| %>
+          <%= render :partial => "partials/cooker", locals: {cooker: cook} %>
+          <% end %>
+        </div>
+  
+
+
+</body>

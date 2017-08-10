@@ -1,3 +1,25 @@
-<h1>welcome to my capstone</h1>
 
-<%= link_to "logout", destroy_user_session_path, method: :delete %>
+<body id="landing-page">
+  <div class="container">
+    <div class="welcome"> <h1>soup lady</h1> </div>
+
+    <div class="about-us"><h3>A community driven approach to better food<h3></div>
+
+      <div class="container"> 
+        <div class="row">
+          <div class="col-3"></div>
+          <div class="col-2" id="block-1">some</div>
+          <div class="col-2" id="block-2">thing</div>
+          <div class="col-2" id="block-3">here</div>
+          <div class="col-3"></div>
+        </div>
+      </div>
+
+      <div class="login-button">
+         <%= link_to('Enter', new_user_session_path) %>
+      </div> 
+        
+              <%= link_to('Register', new_user_registration_path)  %> 
+                <%= link_to "logout", destroy_user_session_path, method: :delete %>
+  </div>
+</body>

@@ -1,18 +1,27 @@
 <h3>The following information is required to set up your Cooker profile</h3>
 
-<%= form_for Cooker.new do |f| %>
+<div class="container" "sign">
+  <div class="row">
+    <div class="col-sm-6 col-md-4 col-md-offset-1"> 
+        <%= form_for @cooker do |f| %>
 
-    Food Description <%= f.text_field :food_description %>
-    <p></p>
-    Price <%= f.select :price_per_week, options_for_select([['on the cheap'],['average'],['ballin']]) %>
-    <p></p>
-    Neighborhood <%= f.select :neighborhood, options_for_select([['El Poblado'], ['Centro'], ['Envigado'], ['Laurales']]) %>
-    <p></p>
-    Delivery Available? <%= f.select :delivery_available, options_for_select([['Yes'],['No']]) %>
-    <p></p>
- <%= f.submit "Sign up" %>
+            Food Description <%= f.text_field :food_description %>
+            <p></p>
+            Price (in USD for 5 meals) <%= f.select :price_per_week, options_for_select([['under 40'],['40-60'],['over 60']]) %>
+            <p></p>
+            Dietary Guides <%= f.select :dietary_options, options_for_select([['none'],['vegetarian'],['pescatarian'],['vegan']]) %>
+            <p></p>
+            Neighborhood <%= f.select :neighborhood, options_for_select([['El Poblado'], ['Centro'], ['Envigado'], ['Laurales']]) %>
+            <p></p>
+            Delivery Available? <%= f.select :delivery_available, options_for_select([['Yes'],['No']]) %>
+            <p></p>
+            Profile Photo: <%= f.text_field :profile_photo %>
+        <%= f.submit "Sign up" %>
 
- <% end %>
+        <% end %>
+    </div>
+  </div>
+</div>
 
 
 

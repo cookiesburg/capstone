@@ -10,21 +10,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170806230315) do
+ActiveRecord::Schema.define(version: 20170808204417) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "cookers", force: :cascade do |t|
     t.string "food_description"
-    t.integer "price_per_week"
+    t.string "price_per_week"
     t.string "neighborhood"
     t.boolean "delivery_available"
+    t.bigint "user_id"
+    t.string "dietary_options"
+    t.string "profile_photo"
+    t.index ["user_id"], name: "index_cookers_on_user_id"
   end
 
   create_table "eaters", force: :cascade do |t|
     t.bigint "user_id"
-    t.integer "subscribed_to"
+    t.integer "cooker_id"
     t.index ["user_id"], name: "index_eaters_on_user_id"
   end
 
@@ -48,4 +52,5 @@ ActiveRecord::Schema.define(version: 20170806230315) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "cookers", "users"
 end
