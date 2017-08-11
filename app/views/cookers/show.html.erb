@@ -1,33 +1,32 @@
 <body id="cooker-home">
   
 <%= render partial: "partials/nav" %>
+
+<div class="container">
+  <div class="jumbotron">
+    <h1>Welcome, <%= current_user.username %></h1> 
+    <p> mouths to feed this week (<%=Eater.all.where(cooker_id: current_user.cooker.id).count%>) </p> 
+  </div>
+</div>
+  
   <br/>
   <br/>
   <br/>
+  <br/>
+  <br/>
+
+  
 <%= render partial: "partials/cooker_home", locals: {cooker: current_user.cooker}%>
-  <br/>
-  <%= link_to "edit profile page", edit_cooker_path(current_user.cooker.id), method: :get %>
   <br/>
   <div class="container" id="cooker-page">
     <div class="row">
-      <div class ="col-lg-8 col-md-8 col-sm-8">
-        <div class="list-of-eaters">
-          <div class="row">
-          <h3>Mouths to Feed: <%=Eater.all.where(cooker_id: current_user.id).count%></h3>
-            <p>list of eaters</p>
-            <br/>
-            <br/>
-            <br/>
-            <br/>
-            <br/>
-            <br/>
-            <br/>
-            <br/>
-            <br/>
-            <br/>
-          </div>
-        </div>
-      </div>
+      
+      
+      
+     <%= current_user.cooker.eaters.each do |eater|%>
+     <%= eater.user.username %>   <%= eater.user.phone_number %>   <%= eater.user.email %><% end %>
+
+
     </div>
   </div>
 </body>

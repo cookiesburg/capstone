@@ -2,13 +2,19 @@
   
 <%= render :partial => "partials/nav" %>
 
-  <div class="page-header">
-    <h2>welcome <%=current_user.username%> <small><%=  %></small></h1>
+ 
+<div class="container">
+  <div class="jumbotron">
+    <h1>Welcome, <%= current_user.username %></h1> 
+    <p> your current cooker is <%=current_user.eater.cooker.user.username %> </p> 
   </div>
-  
-  <br/>
-  <br/>
-  <br/>
+</div>
+
+<br/>
+<br/>
+<br/>
+<br/>
+
 
 
   <div class="container-fluid">
@@ -17,17 +23,18 @@
 
       <div class="col-md-10" id="search-area">
           <%= form_tag("/eater", method: "get") do %>
-            <%= label_tag(:price, "Select Price Range:") %>
+            <%= label_tag(:price, "Price (Weekly USD):") %>
             <%= select_tag 'price', options_for_select([['under 40'],['40-60'],['over 60']]) %>
             <%= label_tag(:diet, "Dietary Restrictions:") %>
             <%= select_tag 'diet', options_for_select([['none'],['vegetarian'],['vegan'],['pescatarian']]) %>
-            <%= label_tag(:location, "Cooker Location:") %>
+            <%= label_tag(:location, "Neighborhood:") %>
             <%= select_tag 'location', options_for_select([['El Poblado'],['Centro'],['Envigado'],['Laurales']]) %>
-            <%= label_tag(:delivery, "With Delivery Option?:") %>
+            <%= label_tag(:delivery, "Delivery?:") %>
             <%= select_tag 'delivery', options_for_select([['Yes'],['No']]) %>
-            <%= submit_tag("Filter") %>
+            <%= submit_tag("Filter Cookers") %>
           <% end %>
       </div>
+    
 
       <div class="col-md-1"></div>
     </div>

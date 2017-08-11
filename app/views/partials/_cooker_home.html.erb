@@ -16,9 +16,8 @@
               <br/>Specialty Diets :  <%= cooker.dietary_options %>
               <br/>
               <br/><%= cooker.food_description %></p>
-
               
-              <%= link_to "edit profile page", edit_cooker_path(current_user.cooker.id), method: :get %>
+              <%= link_to "edit profile", edit_cooker_path(current_user.cooker.id), method: :get, class:"btn btn-info subscribe-button" %>
           </div>
 
       </div>

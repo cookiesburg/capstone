@@ -14,6 +14,8 @@
  *= require_self
  */
 
+
+
 .sign-up-login {
   background-image: url("http://orig02.deviantart.net/eec1/f/2013/259/1/b/fried_egg_by_jsharts-d6mjo5d.jpg");
   background-size: cover;
@@ -21,18 +23,34 @@
   background-attachment: fixed;
 } 
 
+.jumbotron {
+  background: rgba(253, 236, 252, 0.8)
+}
 
-  .login-button {
+
+  #enter {
   width: 90px;
   height: 90px;
   padding: 10px 16px;
   font-size: 24px;
   line-height: 1.33;
-  border-radius: 50px;
+  border-radius: 100%;
   color: white;
-  margin-left: 420px;
+  display: block;
+  margin: auto;
 }
 
+.btn-circle.btn-xl {
+  width: 90px;
+  height: 90px;
+  padding: 10px 16px;
+  font-size: 24px;
+  line-height: 1.33;
+  border-radius: 55px;
+  border: 7px double black;
+  font-size: 20px;
+  vertical-align: center;
+}
 
 #landing-page {
   background-image: url("http://modernistcuisine.com/wp-content/uploads/2013/05/12-vegetable-garden2.jpg");
@@ -53,6 +71,10 @@
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
+ }
+
+ #cooker-page {
+   color: white;
  }
 
 .welcome {
@@ -106,9 +128,9 @@
 
 #cooker-summary {
   font-family: courier;
-  border: 2px solid black;
+  /* border: 2px solid black; */
   border-radius: 0px 60px 60px 0px;
-  background-color: white;
+  background: rgba(255, 255, 255, 0.86);
 }
 
 .subscribe-button{
@@ -124,11 +146,17 @@
 }
 
 #search-area {
-  border: 2px solid black;
-  background-color: pink;
+  border: 2px solid black; 
+  background: rgba(243, 155, 239, 0.85);
   margin-bottom: 40px;
   padding: 30px;
-  border-radius: 60px;
+  border-radius: 6px 6px 6px 6px; 
+}
+
+.grid {
+  display: block;
+  margin: auto;
+  text-align: center;
 }
 
 
