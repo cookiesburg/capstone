@@ -2,11 +2,32 @@
 <body id="landing-page">
     <div class="welcome"> <h1>soup lady</h1> </div>
     <br/>
-    <div class="about-us"><h3>A community driven approach to better food<h3></div>
+    <div class="about-us"><h3>SoupLady is an online platform to help connect community memebers find homecooked meals in their area providing more affordable and healthier food options while stengthining the local economy<h3></div>
+    <br/>
+
+    <div class="container-fluid" id="about">
+    <div class="row">
+      <div class="col-md-1"></div>
+      <div class="col-md-10">
+        <div id="about-a" class="col-md-4">better food</div>
+        <div id="about-b" class="col-md-4">better price</div>
+        <div id="about-c" class="col-md-4">better community</div>
+      </div>
+      <div class="col-md-1"></div>
+    </div>
+    </div>
+
     <br/>
     <br/>
+
+
     <div id="enter">
-      <%= link_to 'Enter', new_user_session_path, method: :get, class:"btn btn-default btn-circle btn-xl" %>
+      <%= link_to 'enter', new_user_session_path, method: :get, class:"btn btn-default btn-circle btn-xl" %>
    </div>
-<%= link_to "logout", destroy_user_session_path, method: :delete %>
+
+   <br/>
+   <br/>
+   <br/>
+  
+
 </body>

@@ -20,9 +20,13 @@
   <br/>
   <div class="container" id="cooker-page">
     <div class="row">
+    <h2> Current Patrons<h2>
       
-      
-      
+    <% Eater.all.where(cooker_id: current_user.cooker.id).each do |e|%>
+      <%= e.user_id %>
+    <%end%>
+    </br>
+    can only access user_id right now
    
 
 

@@ -53,7 +53,7 @@
 }
 
 #landing-page {
-  background-image: url("http://modernistcuisine.com/wp-content/uploads/2013/05/12-vegetable-garden2.jpg");
+  background-image: url(#"http://modernistcuisine.com/wp-content/uploads/2013/05/12-vegetable-garden2.jpg");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -122,12 +122,12 @@
 .cook-name {
   font-size: 24px;
   text-align: center; 
-  font-weight: bold;
-  font-family: Courier New, Courier, monospace;
+  font-weight: bolder;
+  font-family: 'Oxygen', sans-serif;
 }
 
 #cooker-summary {
-  font-family: courier;
+  font-family: 'Oxygen', sans-serif;
   /* border: 2px solid black; */
   border-radius: 0px 60px 60px 0px;
   background: rgba(255, 255, 255, 0.86);
@@ -159,5 +159,19 @@
   text-align: center;
 }
 
+#about-a {
+  text-align: center;
+  color: black;
+}
+
+#about-b {
+  text-align: center;
+  color: black;
+}
+
+#about-c {
+  text-align: center;
+  color: black;
+}
 
 
