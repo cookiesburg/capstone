@@ -30,7 +30,7 @@
             <%= select_tag 'diet', options_for_select([['none'],['vegetarian'],['vegan'],['pescatarian']]) %>
             <%= label_tag(:location, "Neighborhood:") %>
             <%= select_tag 'location', options_for_select([['El Poblado'],['Centro'],['Envigado'],['Laurales']]) %>
-            <%= label_tag(:delivery, "Delivery?:") %>
+            <%= label_tag(:delivery, "Will Deliver?:") %>
             <%= select_tag 'delivery', options_for_select([['Yes'],['No']]) %>
             <%= submit_tag("Filter Cookers") %>
           <% end %>

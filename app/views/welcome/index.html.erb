@@ -1,30 +1,38 @@
 
 <body id="landing-page">
-    <div class="welcome"> <h1>soup lady</h1> </div>
-    <br/>
-    <div class="about-us"><h3>SoupLady is an online platform to help connect community memebers find homecooked meals in their area providing more affordable and healthier food options while stengthining the local economy<h3></div>
-    <br/>
 
+<div class="container">
+<div class="jumbotron" id="welcome-jumbo">
+    <div class="welcome"> <h1>SoupLady</h1> </div>
+    <div class="about-us"><h3>A community driven approach to better food.<h3></div>                     
+</div>
+</div>
+
+    
     <div class="container-fluid" id="about">
     <div class="row">
-      <div class="col-md-1"></div>
-      <div class="col-md-10">
-        <div id="about-a" class="col-md-4">better food</div>
-        <div id="about-b" class="col-md-4">better price</div>
-        <div id="about-c" class="col-md-4">better community</div>
+      <div class="col-md-2"></div>
+      <div class="col-md-8">
+        <div id="about-us"> SoupLady is an online platform that connects local homecooks with community members seeking more affordable, healthier and locally sourced meal options. It strives to improve the health of it's consumers while providing a source of income for it's local producers.</div>
       </div>
-      <div class="col-md-1"></div>
+      <div class="col-md-2"></div>
     </div>
     </div>
+    
+    </br>
+    </br>
 
-    <br/>
-    <br/>
+    <div class="container">
+    <div class="row">
+       <div class="col-md-4"></div>
+       <div class="col-md-2" id="login-btn"><%= link_to 'Login', new_user_session_path, method: :get, class:"btn btn-light btn-xl" id"bts"" %></div>
+       <div class="col-md-2" id="sign-up-btn"><%= link_to 'Sign up', new_user_registration_path, method: :get, class:"btn btn-light btn-xl" id:"bts" %></div>
+       <div class="col-md-4"></div>
+    </div>
+    </div>
+    
 
-
-    <div id="enter">
-      <%= link_to 'enter', new_user_session_path, method: :get, class:"btn btn-default btn-circle btn-xl" %>
-   </div>
-
+  
    <br/>
    <br/>
    <br/>

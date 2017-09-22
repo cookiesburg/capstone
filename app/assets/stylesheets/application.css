@@ -23,6 +23,14 @@
   background-attachment: fixed;
 } 
 
+#bts {
+  width: 90px;
+  height: 90px;
+  padding: 10px 16px;
+  font-size: 24px;
+  align-content: center;
+}
+
 .jumbotron {
   background: rgba(253, 236, 252, 0.8)
 }
@@ -35,7 +43,7 @@
   font-size: 24px;
   line-height: 1.33;
   border-radius: 100%;
-  color: white;
+  color: black;
   display: block;
   margin: auto;
 }
@@ -79,13 +87,28 @@
 
 .welcome {
   text-align: center;
-  margin-top: 200px;
-  -webkit-text-stroke: 1px black;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  font-family: Courier New, Courier, monospace;
+}
+
+#welcome-jumbo {
+  background: rgba(127, 236, 100, 0.8)
+}
+
+#about-us {
+  color: black;
+  text-align: center;
+  font-size: 18px;
+  font-family: 'Asap Condensed', sans-serif;
+  margin-top: 70px;
 }
 
 .about-us {
+  color: black;
   text-align: center;
-  font-family: courier;
+  font-size: 24px;
+  font-family: 'Asap Condensed', sans-serif;
 }
 
 .about {
@@ -147,7 +170,7 @@
 
 #search-area {
   border: 2px solid black; 
-  background: rgba(243, 155, 239, 0.85);
+  background: rgba(127, 236, 100, 0.8);
   margin-bottom: 40px;
   padding: 30px;
   border-radius: 6px 6px 6px 6px; 
@@ -159,19 +182,6 @@
   text-align: center;
 }
 
-#about-a {
-  text-align: center;
-  color: black;
-}
 
-#about-b {
-  text-align: center;
-  color: black;
-}
-
-#about-c {
-  text-align: center;
-  color: black;
-}
 
 
