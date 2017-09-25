@@ -16,6 +16,11 @@
 
 $(document).ready(function() {
 
+
+    $("#welcome-jumbo").click(function(){
+        $(this).hide();
+    });
+      
     
 
 });

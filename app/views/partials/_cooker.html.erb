@@ -4,7 +4,7 @@
 
       <div class ="col-md-10 cooker-block">
 
-          <div class="col-md-3">
+          <div class="col-md-3" id="cook-id-block">
               <div id="cook-photo"><img src="<%= cooker.profile_photo %>" class="cooker-img"></div><br/>
               <div class="cook-name"><%= User.find_by_id(cooker.user_id).username%></div>
           </div>

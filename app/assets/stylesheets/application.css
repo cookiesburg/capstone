@@ -14,27 +14,70 @@
  *= require_self
  */
 
-
-
-.sign-up-login {
-  background-image: url("http://orig02.deviantart.net/eec1/f/2013/259/1/b/fried_egg_by_jsharts-d6mjo5d.jpg");
+.sign-up {
+  background-image: url(soup.JPG);
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
 } 
 
-#bts {
-  width: 90px;
-  height: 90px;
+.login {
+  background-image: url(soup.JPG);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.cooker-sign-up {
+  background-image: url(soup.JPG);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.cooker-edit {
+  background-image: url(ksoi.JPG);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.account-settings {
+  background-image: url(qmsoup.JPG);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.btn {
   padding: 10px 16px;
   font-size: 24px;
+  color: black;
   align-content: center;
+  font-family: 'Asap Condensed', sans-serif;
 }
 
 .jumbotron {
   background: rgba(253, 236, 252, 0.8)
 }
 
+.navbar-brand {
+  font-family: Courier New, Courier, monospace;
+  font-size: 32px;
+  color: whitesmoke;
+  color: rgba(127, 236, 100, 0.8);
+}
+
+#nav-link {
+  color: rgba(127, 236, 100, 0.8);
+}
+
+.nav-bar {
+  position: fixed; /* Set the navbar to fixed position */
+  top: 0; /* Position the navbar at the top of the page */
+  width: 100%;
+  background-color: black;
+}
 
   #enter {
   width: 90px;
@@ -69,7 +112,7 @@
 }
 
 #eater-home {
-  background-image: url("https://s-media-cache-ak0.pinimg.com/564x/af/fd/fd/affdfdd4b2af4b89885ac57ef529c9e4.jpg"); 
+  /* background-image: url("https://s-media-cache-ak0.pinimg.com/564x/af/fd/fd/affdfdd4b2af4b89885ac57ef529c9e4.jpg");  */
   background-size: center;
   background-position: center;
   background-attachment: fixed; 
@@ -85,10 +128,10 @@
    color: white;
  }
 
-.welcome {
+#welcome-header {
   text-align: center;
-  margin-top: 100px;
-  margin-bottom: 100px;
+  margin-top: 80px;
+  margin-bottom: 60px;
   font-family: Courier New, Courier, monospace;
 }
 
@@ -101,10 +144,10 @@
   text-align: center;
   font-size: 18px;
   font-family: 'Asap Condensed', sans-serif;
-  margin-top: 70px;
+  margin-top: 30px;
 }
 
-.about-us {
+#tag-line {
   color: black;
   text-align: center;
   font-size: 24px;
@@ -123,6 +166,10 @@
   
 }
 
+#cook-id-block {
+  color: white;
+  background-color: black:
+}
 
 #cooker-profile {
   margin-bottom: 40px;
@@ -146,16 +193,21 @@
   font-size: 24px;
   text-align: center; 
   font-weight: bolder;
-  font-family: 'Oxygen', sans-serif;
+  font-family: 'Asap Condensed', sans-serif;
 }
 
 #cooker-summary {
-  font-family: 'Oxygen', sans-serif;
-  /* border: 2px solid black; */
-  border-radius: 0px 60px 60px 0px;
+  font-family: 'Asap Condensed', sans-serif;
+  font-size: 16px;
+  border: 2px solid black;
+  border-radius: 0px 0px 0px 0px;
   background: rgba(255, 255, 255, 0.86);
 }
 
+#search-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
 .subscribe-button{
   /* width: 30px;
   height: 30px;
@@ -165,7 +217,9 @@
   color: blueviolet;
   border-radius: 50px; */
   /* display: block; */
+  font-size:18px;
   margin-bottom: 15px
+  
 }
 
 #search-area {
@@ -182,6 +236,9 @@
   text-align: center;
 }
 
+#eater-home {
+  margin-top: 60px;
+}
 
 
 

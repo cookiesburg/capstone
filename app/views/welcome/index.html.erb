@@ -3,39 +3,27 @@
 
 <div class="container">
 <div class="jumbotron" id="welcome-jumbo">
-    <div class="welcome"> <h1>SoupLady</h1> </div>
-    <div class="about-us"><h3>A community driven approach to better food.<h3></div>                     
+    <div id="welcome-header"> <h1>SoupLady</h1> </div>
+    <div id="tag-line"><h3>A community driven approach to better food.<h3></div>                     
 </div>
 </div>
 
-    
-    <div class="container-fluid" id="about">
-    <div class="row">
-      <div class="col-md-2"></div>
-      <div class="col-md-8">
-        <div id="about-us"> SoupLady is an online platform that connects local homecooks with community members seeking more affordable, healthier and locally sourced meal options. It strives to improve the health of it's consumers while providing a source of income for it's local producers.</div>
-      </div>
-      <div class="col-md-2"></div>
-    </div>
-    </div>
-    
-    </br>
-    </br>
+<div class="container-fluid" id="about">
+<div class="row">
+  <div class="col-md-3"></div>
+  <div class="col-md-6">
+    <div id="about-us"> SoupLady is an online platform that connects local homecooks with community members seeking more affordable, healthier and locally sourced meal options. It strives to improve the health of consumers while serving as an economic engine in the community.</div>
+  </div>
+  <div class="col-md-3"></div>
+</div>
+</div>
 
-    <div class="container">
-    <div class="row">
-       <div class="col-md-4"></div>
-       <div class="col-md-2" id="login-btn"><%= link_to 'Login', new_user_session_path, method: :get, class:"btn btn-light btn-xl" id"bts"" %></div>
-       <div class="col-md-2" id="sign-up-btn"><%= link_to 'Sign up', new_user_registration_path, method: :get, class:"btn btn-light btn-xl" id:"bts" %></div>
-       <div class="col-md-4"></div>
-    </div>
-    </div>
-    
-
-  
-   <br/>
-   <br/>
-   <br/>
-  
-
+<div class="container">
+<div class="row">
+    <div class="col-md-4"></div>
+    <div class="col-md-2" id="login-btn"><%= link_to 'Login', new_user_session_path, method: :get, class:"btn btn-light"%></div>
+    <div class="col-md-2" id="sign-up-btn"><%= link_to 'Sign Up', new_user_registration_path, method: :get, class:"btn btn-light"%></div>
+    <div class="col-md-4"></div>
+</div>
+</div>
 </body>

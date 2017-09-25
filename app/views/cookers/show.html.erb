@@ -3,9 +3,9 @@
 <%= render partial: "partials/nav" %>
 
 <div class="container">
-  <div class="jumbotron">
-    <h1>Welcome, <%= current_user.username %></h1> 
-    <p> mouths to feed this week (<%=Eater.all.where(cooker_id: current_user.cooker.id).count%>) </p> 
+  <div class="jumbotron" id="cook=jumbo">
+    <h3>Welcome back, <%= current_user.username %></h3> 
+    <h4> You have (<%=Eater.all.where(cooker_id: current_user.cooker.id).count %>) current patrons</h4> 
   </div>
 </div>
   
@@ -23,7 +23,7 @@
     <h2> Current Patrons<h2>
       
     <% Eater.all.where(cooker_id: current_user.cooker.id).each do |e|%>
-      <%= e.user_id %>
+      <%= e %>
     <%end%>
     </br>
     can only access user_id right now
