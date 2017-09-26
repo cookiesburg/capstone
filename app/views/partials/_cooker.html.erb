@@ -1,30 +1,26 @@
 <div class="container-fluid" id="cooker-profile">
   <div class="row">
-      <div class="col-md-1"></div>
-
-      <div class ="col-md-10 cooker-block">
-
-          <div class="col-md-3" id="cook-id-block">
-              <div id="cook-photo"><img src="<%= cooker.profile_photo %>" class="cooker-img"></div><br/>
-              <div class="cook-name"><%= User.find_by_id(cooker.user_id).username%></div>
-          </div>
-
-          <div class="col-md-9" id="cooker-summary">
+    <div class="col-md-1"></div>
+    <div class ="col-md-10 cooker-block">
+        <div class="col-md-3" id="cook-id-block">
+            <div id="cook-photo"><img src="<%= cooker.profile_photo %>" class="cooker-img"></div><br/>
+            <div class="cook-name"><%= User.find_by_id(cooker.user_id).username%></div>
+        </div>
+        <div class="col-md-9" id="cooker-summary">
             <p><br/>Price Per Week (USD) :  <%= cooker.price_per_week %>
-              <br/>Neighborhood :  <%= cooker.neighborhood %>
-              <br/>Delivery Available? :  <%= cooker.delivery_available %>
-              <br/>Specialty Diets :  <%= cooker.dietary_options %>
-              <br/>
-              <br/><%= cooker.food_description %></p>
-              <br/>
-              <div class="subscribe-button">
-              <%= form_for (current_user.eater), url: eater_path(current_user.eater.id), method: :patch do |f| %>
-              <%= f.hidden_field :cooker_id, :value => cooker.id %>
-              <%= f.submit "subscribe", class:'btn btn-info' %>
-              <% end %>
-              </div>
-          </div>
-      </div>
-
+            <br/>Neighborhood :  <%= cooker.neighborhood %>
+            <br/>Delivery Available? :  <%= cooker.delivery_available %>
+            <br/>Specialty Diets :  <%= cooker.dietary_options %>
+            <br/>
+            <br/><%= cooker.food_description %></p>
+            <br/>
+            <div class="subscribe-button">
+            <%= form_for (current_user.eater), url: eater_path(current_user.eater.id), method: :patch do |f| %>
+            <%= f.hidden_field :cooker_id, :value => cooker.id %>
+            <%= f.submit "subscribe", class:'btn btn-info' %>
+            <% end %>
+            </div>
+        </div>
+    </div>
   </div>
 </div>

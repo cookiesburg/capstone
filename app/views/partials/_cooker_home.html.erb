@@ -1,14 +1,11 @@
 <div class="container-fluid" id="cooker-profile">
   <div class="row">
       <div class="col-md-1"></div>
-
       <div class ="col-md-10 cooker-block">
-
           <div class="col-md-3">
               <div id="cook-photo"><img src="<%= cooker.profile_photo %>" class="cooker-img"></div><br/>
               <div class="cook-name"><%= User.find_by_id(cooker.user_id).username%></div>
           </div>
-          
           <div class="col-md-9" id="cooker-summary">
             <p><br/>Price Per Week (USD) :  <%= cooker.price_per_week %>
               <br/>Neighborhood :  <%= cooker.neighborhood %>
@@ -16,12 +13,9 @@
               <br/>Specialty Diets :  <%= cooker.dietary_options %>
               <br/>
               <br/><%= cooker.food_description %></p>
-              
               <%= link_to "edit profile", edit_cooker_path(current_user.cooker.id), method: :get, class:"btn btn-info subscribe-button" %>
           </div>
-
       </div>
-
       <div class="col-md-1"></div>
   </div>
 </div>

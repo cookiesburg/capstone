@@ -28,6 +28,13 @@
   background-attachment: fixed;
 }
 
+#sign-up-form {
+  color: white;
+}
+#login-form {
+  color: white;
+}
+
 .cooker-sign-up {
   background-image: url(soup.JPG);
   background-size: cover;
@@ -72,13 +79,6 @@
   color: rgba(127, 236, 100, 0.8);
 }
 
-.nav-bar {
-  position: fixed; /* Set the navbar to fixed position */
-  top: 0; /* Position the navbar at the top of the page */
-  width: 100%;
-  background-color: black;
-}
-
   #enter {
   width: 90px;
   height: 90px;
@@ -103,20 +103,17 @@
   vertical-align: center;
 }
 
-#landing-page {
-  background-image: url(#"http://modernistcuisine.com/wp-content/uploads/2013/05/12-vegetable-garden2.jpg");
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  color: whitesmoke;
-}
-
 #eater-home {
   /* background-image: url("https://s-media-cache-ak0.pinimg.com/564x/af/fd/fd/affdfdd4b2af4b89885ac57ef529c9e4.jpg");  */
   background-size: center;
   background-position: center;
   background-attachment: fixed; 
 }
+
+#current-cook-photo {
+  
+}
+
  #cooker-home {
   background-image: url("https://s-media-cache-ak0.pinimg.com/736x/5f/5b/eb/5f5beba7e8fb91603dc54c695686277a--avocado-tattoo-kitchen-art.jpg");
   background-size: cover;
@@ -133,10 +130,15 @@
   margin-top: 80px;
   margin-bottom: 60px;
   font-family: Courier New, Courier, monospace;
+  color: white;
+}
+
+.welcome-jumbo {
+  margin-top: 60px;
 }
 
 #welcome-jumbo {
-  background: rgba(127, 236, 100, 0.8)
+  background: rgba(127, 236, 100, 0.8);
 }
 
 #about-us {
@@ -145,10 +147,11 @@
   font-size: 18px;
   font-family: 'Asap Condensed', sans-serif;
   margin-top: 30px;
+  margin-bottom: 50px;
 }
 
 #tag-line {
-  color: black;
+  color:white;
   text-align: center;
   font-size: 24px;
   font-family: 'Asap Condensed', sans-serif;
@@ -189,8 +192,27 @@
   border: 3px double black;
 }
 
+#cooker-img {
+  width: 110px;
+  height: 110px;
+  padding: 4px 4px;
+  /* line-height: 1.33; */
+  border-radius: 50%;
+  border: 3px double black;
+  margin-left: 23%;
+}
+#cook-info-eater {
+  text-align: center;
+}
+
 .cook-name {
   font-size: 24px;
+  text-align: center; 
+  font-weight: bolder;
+  font-family: 'Asap Condensed', sans-serif;
+}
+#cook-name {
+  font-size: 18px;
   text-align: center; 
   font-weight: bolder;
   font-family: 'Asap Condensed', sans-serif;
@@ -207,6 +229,11 @@
 #search-header {
   text-align: center;
   margin-bottom: 30px;
+}
+
+#search-box {
+ 
+  margin-top: 60px;
 }
 .subscribe-button{
   /* width: 30px;
@@ -238,6 +265,13 @@
 
 #eater-home {
   margin-top: 60px;
+}
+
+.nav-bar {
+  position: fixed; 
+  top: 0; /* Position the navbar at the top of the page */
+  width: 100%;
+  background-color: black;
 }
 
 
