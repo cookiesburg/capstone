@@ -3,34 +3,41 @@
 <%= render partial: "partials/nav" %>
 
 <div class="container">
-  <div class="jumbotron" id="cook=jumbo">
-    <h3>Welcome back, <%= current_user.username %></h3> 
-    <h4> You have (<%=Eater.all.where(cooker_id: current_user.cooker.id).count %>) current patrons</h4> 
-  </div>
-</div>
-  
-  <br/>
-  <br/>
-  <br/>
-  <br/>
-  <br/>
-
-  
-<%= render partial: "partials/cooker_home", locals: {cooker: current_user.cooker}%>
-  <br/>
-  <div class="container" id="cooker-page">
-    <div class="row">
-    <h2> Current Patrons<h2>
-      
-    <% Eater.all.where(cooker_id: current_user.cooker.id).each do |e|%>
-      <%= e %>
-    <%end%>
-    </br>
-    can only access user_id right now
-   
-
-
+  <div class="col-md-3"></div>
+  <div class="col-md-6 cooker-welcome">
+    <div id="welcome-cooker-head"><h2>Welcome back, <%= current_user.username %></div> 
+    <p id="veiw-patrons"> You have (<%=Eater.all.where(cooker_id: current_user.cooker.id).count %>) patrons to cook for this week</p> 
     </div>
+    <div class="col-md-3"></div>
+    </div>
+    
+  <div class="container"> 
+    <div class="col-md-4"></div>
+      <div class="col-md-4 self-profile">
+          <%= render partial: "partials/cooker_home", locals: {cooker: current_user.cooker}%>
+      </div>
+    <div class="col-md-4"></div>
   </div>
-</body>
+  
 
+  
+
+  
+
+
+
+  <div class="container" id="cooker-page">
+    <% Eater.all.where(cooker_id: current_user.cooker.id).each do |e|%>
+      <%= e.user.id %>
+    <%end%>
+  </div>
+  
+  <script>
+    $("#veiw-patrons").click(function() {
+      swal({title:'Current Patrons',
+      input: 'You have successfully subscribed'
+      });
+    });
+  </script>
+
+</body>

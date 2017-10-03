@@ -10,17 +10,15 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
+//= require sweetalert2
+//= require sweet-alert2-rails
 //= require rails-ujs
 //= require turbolinks
 //= require_tree .
 
+   
 $(document).ready(function() {
-
-
-    $("#welcome-jumbo").click(function(){
-        $(this).hide();
+    $("#cooker-img").click(function() {
+        $(this).append("<p <%=current_user.eater.cooker.user.email %> </p>");
     });
-      
-    
-
 });
