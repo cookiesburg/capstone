@@ -99,7 +99,14 @@
     }
   .head {
     font-size: 18px;
-  }
+  } 
+    .box-head {
+      grid-column:2/3;
+      grid-row:1/2;
+      font-size:24px;
+      font-family: 'Josefin Sans', sans-serif;
+      padding-top:15px;
+    }
     .box1-head {
       grid-column:1/2;
       grid-row:3/4;
@@ -261,7 +268,7 @@
   }
   #cook-id-block {
     color: white;
-    background-color: black:
+    background-color: black;
   }
   
   #cooker-page {
