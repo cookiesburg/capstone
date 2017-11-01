@@ -11,7 +11,7 @@ class EatersController < ApplicationController
       end
     end
 
-    def show
+    def show 
       @eater = current_user.eater
       @cookers = filtered_cookers
     end
@@ -19,23 +19,25 @@ class EatersController < ApplicationController
     def update
       @eater = current_user.eater
       if @eater.update_attributes(allowed_params)
-        flash[:alert] = "Subscribed"
         redirect_to eater_path(current_user.eater.id)
+        sleep(1.second)
+        flash[:alert] = "Subscribed"
       end
     end
 
 private
 
     def allowed_params
-      return params.require(:eater).permit(:allergies, :user_type, :subscribed_to, :cooker_id)
+      return params.require(:eater).permit(:user_type, :subscribed_to, :cooker_id)
     end
 
     def filtered_cookers
       cookers = Cooker.all
-      cookers = cookers.where(price_per_week: params[:price]) if params[:price]
-      cookers = cookers.where(dietary_options: params[:diet]) if params[:diet]
-      cookers = cookers.where(neighborhood: params[:location]) if params[:location]
+      params[:price] == "Any" ? cookers = cookers : cookers = cookers.where(price_per_week: params[:price])
+      params[:diet] == "None" ? cookers = cookers : cookers = cookers.where(dietary_options: params[:diet])
+      params[:location] == "All" ? cookers = cookers : cookers = cookers.where(neighborhood: params[:location]) 
       cookers = cookers.where(delivery_available: params[:delivery]) if params[:delivery]
       cookers
     end
+
 end

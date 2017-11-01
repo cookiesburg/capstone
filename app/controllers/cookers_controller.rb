@@ -1,4 +1,6 @@
 class CookersController < ApplicationController
+    helper_method :patrons
+
     def new
       @cooker = Cooker.new     #redirects to cooker new html
     end
@@ -19,11 +21,17 @@ class CookersController < ApplicationController
     def update
       @cooker = Cooker.find(params[:id])
       if @cooker.update_attributes(allowed_params)
-        flash[:alert] = "Profile Updated"
         redirect_to cooker_path(current_user.cooker.id)
       end
     end
 
+    def patrons
+      User.all.where(user_type: 1).find_all  do |e|
+        e.eater.cooker_id == current_user.cooker.id
+      end
+    end 
+
+  
 
 private
 

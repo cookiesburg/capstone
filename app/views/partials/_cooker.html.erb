@@ -1,16 +1,14 @@
-<div class="wrapper-profile-container" id="cooker-profile">
+<div class="wrapper-profile-container self" id="cooker-profile">
   <div class="wrapper-cook-profile">
     <div class"nested-profile-top">
-
       <div class="cook-photo-id">
         <div class="cook-photo"><img src="<%= cooker.profile_photo %>" class="cooker-img"></div><br/>
         <div class="cook-name"><%= User.find_by_id(cooker.user_id).username%></div> 
       </div>
-
       <div class="cook-stats">
         <br/>Price Per Week (USD) :  <%= cooker.price_per_week %>
         <br/>Neighborhood :  <%= cooker.neighborhood %>
-        <br/>Delivery Available? :  <%= cooker.delivery_available %>
+        <br/>Delivery Available? :  <%= cooker.delivery_available == true ? "Yes" : "No" %>
         <br/>Specialty Diets :  <%= cooker.dietary_options %>  
       </div>
     </div>
@@ -25,6 +23,13 @@
       <%= f.submit "Subscribe", class:'btn btn-primary btn-lg btn-block' %>
       <% end %>
     </div>
-
   </div>
 </div>
+
+<script>
+$(".btn-primary").click(function() {
+  swal({title:'Subscribed To New Cook',
+  input: ''
+  });
+});
+</script>

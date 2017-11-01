@@ -9,29 +9,35 @@
                 
             <%= form_for (current_user.cooker), url: cooker_path(current_user.cooker.id), method: :patch do |f| %>
 
-                <div class="form-group">
-                  Food Description <%= f.text_field :food_description, class:"form-control" %>
-                </div>
-                <div class="form-group">
-                  Price (in USD for 5 meals) <%= f.select :price_per_week, options_for_select([['under 40'],['40-60'],['over 60']]) %>
-                </div>
-                <div class="form-group">
-                  Dietary Guides <%= f.select :dietary_options, options_for_select([['none'],['vegetarian'],['pescatarian'],['vegan']]) %>
-                </div>
-                <div class="form-group">
-                  Neighborhood <%= f.select :neighborhood, options_for_select([['El Poblado'], ['Centro'], ['Envigado'], ['Laurales']]) %>
-                </div>
-                <div class="form-group">
-                  Delivery Available? <%= f.select :delivery_available, options_for_select([['Yes'],['No']]) %>
-                </div>
-                <div class="form-group">
-                  Profile Photo: <%= f.text_field :profile_photo, class:"form-control" %>
-                </div>
 
-              <div class="actions">
-                <%= f.submit "Update" %>
-              </div>
-            <% end %>
+              <div class="form-group">
+              <%= f.label :food_description%><br />
+              <%= f.text_field :food_description, autofocus: true, class:"form-control" %>
+            </div>
+            <div class="form-group">
+            <%= f.label :price_per_week%><br />
+            <%= f.select(:price_per_week, ['$','$$','$$$'], :class=>"form-control" )%>
+          </div>
+            <div class="form-group">
+              <%= f.label :dietary_options%><br />
+              <%= f.select(:dietary_options, ['None','Vegetarian','Pescatarian','Vegan'], :class=>"form-control" )%>
+            </div>
+            <div class="form-group">
+              <%= f.label :neighborhood%><br />
+              <%= f.select(:neighborhood, ['El Poblado','Centro','Envigado', 'Laurales'], :class=>"form-control" )%>
+            </div>
+            <div class="form-group">
+              <%= f.label :Are_you_willing_to_deliver?%><br />
+              <%= f.select(:delivery_available, ['Yes','No'], :class=>"form-control" )%>
+            </div>
+            <div class="form-group">
+              <%= f.label :Upload_profile_photo%><br />
+              <%= f.text_field :profile_photo, autofocus: true, class:"form-control" %>
+            </div>
+            <div class="actions">
+              <%= f.submit "Update", class:"btn btn-info subscribe-button sign-up-btn" %>
+            </div>         
+          <% end %>
 
             <%= link_to "Back", :back %>
           </div>

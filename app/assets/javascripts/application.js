@@ -9,7 +9,7 @@
 //
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
-//
+//= require_self
 //= require sweetalert2
 //= require sweet-alert2-rails
 //= require rails-ujs
@@ -18,7 +18,14 @@
 
    
 $(document).ready(function() {
-    $("#cooker-img").click(function() {
-        $(this).append("<p <%=current_user.eater.cooker.user.email %> </p>");
-    });
+    var typed = new Typed('#typed', {
+        stringsElement: '.typed-strings',
+        typeSpeed: 20
+      });
+
+      $("#cooker-img").click(function() {
+        swal("<%=current_user.eater.cooker.user.username %>",
+             "email: <%=current_user.eater.cooker.user.email %> </br> phone: <%=current_user.eater.cooker.user.phone_number %>",
+            );
+      });
 });

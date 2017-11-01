@@ -1,70 +1,45 @@
 <body id="eater-home">
 
-<%= render :partial => "partials/nav" %>
-  
-<div class="container" id="eater-welcome">
-    <div class="col-md-2"></div>
-    <div class="col-md-5">
-      <div id="welcome-eater-head">Welcome back, <%= current_user.username %></div></br>
-      <p> This week <%= current_user.eater.cooker.user.username %> is cooking for you.</p> 
-    </div>
-    <div class="col-md-3">
-      <img src="<%= current_user.eater.cooker.profile_photo%>" id="cooker-img">
-      <div id="cook-name"><%= current_user.eater.cooker.user.username%></div>
-    </div>
-    <div class="col-md-2"></div>
-</div>
+  <%= render :partial => "partials/nav" %>
 
-<div id="search-box">
-  <div id="search-header">
-    <h2>Search For Homecooks</h2>
-  </div>
+  <h2 align="center">Hello, <%= current_user.username %></h2>
+  </br>
+  <h3 align="center">Current Homecook:</h3>
+
+  <%= render :partial =>"partials/curr_cook" if current_user.eater.cooker != nil %>
+  
+  <div id="search-box">
+    <h2 align="center">Search For Homecooks</h2>
     <div class="container-fluid">
       <div class="row">
         <div class="col-md-3"></div>
         <div class="col-md-6" id="search-area">
             <%= form_tag("/eater", method: "get") do %>
-              <%= label_tag(:price, "Price (Weekly USD):") %>
-              <%= select_tag 'price', options_for_select([['under 40'],['40-60'],['over 60']]) %>
+              <%= label_tag(:price, "Weekly Price (Includes 5 meals):") %>
+              <%= select_tag 'price', options_for_select([["Any"], ['$'],['$$'],['$$$']]) %>
               </br>
               <%= label_tag(:diet, "Dietary Restrictions:") %>
-              <%= select_tag 'diet', options_for_select([['none'],['vegetarian'],['vegan'],['pescatarian']]) %>
+              <%= select_tag 'diet', options_for_select([['None'],['Vegetarian'],['Vegan'],['Pescatarian']]) %>
               </br>
               <%= label_tag(:location, "Neighborhood:") %>
-              <%= select_tag 'location', options_for_select([['El Poblado'],['Centro'],['Envigado'],['Laurales']]) %>
+              <%= select_tag 'location', options_for_select([["All"],['El Poblado'],['Centro'],['Envigado'],['Laurales']]) %>
               </br>
-              <%= label_tag(:delivery, "Will Deliver?:") %>
+              <%= label_tag(:delivery, "Delivery?:") %>
               <%= select_tag 'delivery', options_for_select([['Yes'],['No']]) %>
               </br>
               </br>
-              <div class="filter-btn"><%= submit_tag("Filter Cookers") %></div>
+              <div class="btn"><%= submit_tag("Search") %></div>
             <% end %>
         </div>
         <div class="col-md-3"></div>
       </div>
     </div>
   </div>
-       
+      
   <div class="search-results">
     <% @cookers.each do |cook| %>
     <%= render :partial => "partials/cooker", locals: {cooker: cook} %>
     <% end %>
-  </div>
-
-<script>
-$("#cooker-img").click(function() {
-  swal("<%=current_user.eater.cooker.user.username %>",
-       "email: <%=current_user.eater.cooker.user.email %> </br> phone: <%=current_user.eater.cooker.user.phone_number %>",
-      );
-});
-</script>
-
-<script>
-$(".subscribe-button-field").click(function() {
-  swal({type:'success',
-        input: 'You have successfully subscribed'
-       });
-});
-</script>
+  </div> 
 
 </body>

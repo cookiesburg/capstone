@@ -1,0 +1,31 @@
+
+<div class="container">
+    <div align="center"><img src="<%= current_user.eater.cooker.profile_photo%>" class="cooker-img"></div>
+    <h4 align="center" class="cook-name"><%= current_user.eater.cooker.user.username%></h4>
+</div>
+<h5 align="center"><a onclick="myFunction()">Details</a></h5>
+<div class="container" id="curr-cook-details">
+    <div class="col-md-4"></div>
+    <div class="col-md-4">
+        <h4>Contact</h4>
+        email: <%=current_user.eater.cooker.user.email%></br>
+        phone: <%=current_user.eater.cooker.user.phone_number %></br>
+        <h4>Description</h4>
+        <%= current_user.eater.cooker.food_description%>
+    </div>
+    <div class="col-md-4"></div>
+</div>
+</br>
+</br>
+
+<script>
+function myFunction() {
+  var x = document.getElementById("curr-cook-details");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+    } else {
+      x.style.display = "none";
+    }
+  }
+</script>
+

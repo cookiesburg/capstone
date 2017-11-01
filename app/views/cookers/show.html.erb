@@ -1,43 +1,53 @@
 <body id="cooker-home">
   
-<%= render partial: "partials/nav" %>
+  <%= render partial: "partials/nav" %>
+   
+  <div class="cooker-welcome">
+    <h2 align="center"> Welcome back, <%= current_user.username %></h2> 
+    <h3 align="center" id="veiw-patrons"> You have <a onclick="myFunction()">(<%=Eater.all.where(cooker_id: current_user.cooker.id).count %>)</a> patrons to cook for this week</h3> 
+  </div>  
+  
+  <div align="center" class="self-profile">
+    <%= render partial: "partials/cooker_home", locals: {cooker: current_user.cooker}%>
+  </div>
 
-<div class="container">
-  <div class="col-md-3"></div>
-  <div class="col-md-6 cooker-welcome">
-    <div id="welcome-cooker-head"><h2>Welcome back, <%= current_user.username %></div> 
-    <p id="veiw-patrons"> You have (<%=Eater.all.where(cooker_id: current_user.cooker.id).count %>) patrons to cook for this week</p> 
-    </div>
-    <div class="col-md-3"></div>
-    </div>
-    
-  <div class="container"> 
-    <div class="col-md-4"></div>
-      <div class="col-md-4 self-profile">
-          <%= render partial: "partials/cooker_home", locals: {cooker: current_user.cooker}%>
+  <div class="container patrons" id="patrons" align="left">
+      <div class="col-md-3"></div>
+      <div class="col-md-2">
+        <h4>Username</h4>
+        <%= patrons.map do |p| %>
+        <%= p.username %> <br/>
+        <% end %>
       </div>
-    <div class="col-md-4"></div>
+      <div class="col-md-2">
+        <h4>Email</h4>
+        <%= patrons.map do |p| %>
+        <%= p.email %> <br/>
+        <% end %>
+      </div>
+      <div class="col-md-2" align="right">
+        <h4>Phone </h4>
+        <%= patrons.map do |p| %>
+        <%= p.phone_number %> <br/>
+        <% end %>
+      </div>
+      <div class="col-md-3"></div>
   </div>
-  
 
-  
-
-  
-
-
-
-  <div class="container" id="cooker-page">
-    <% Eater.all.where(cooker_id: current_user.cooker.id).each do |e|%>
-      <%= e.user.id %>
-    <%end%>
-  </div>
-  
   <script>
-    $("#veiw-patrons").click(function() {
-      swal({title:'Current Patrons',
-      input: 'You have successfully subscribed'
-      });
-    });
+  function myFunction() {
+    var x = document.getElementById("patrons");
+    if (x.style.display === "none") {
+      x.style.display = "block";
+      } else {
+        x.style.display = "none";
+      }
+    }
   </script>
-
+    
 </body>
+
+
+
+  
+    
