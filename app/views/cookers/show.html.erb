@@ -1,15 +1,17 @@
 <body id="cooker-home">
-  
+
   <%= render partial: "partials/nav" %>
-   
+
   <div class="cooker-welcome">
-    <h2 align="center"> Welcome back, <%= current_user.username %></h2> 
-    <h3 align="center" id="veiw-patrons"> You have <a onclick="myFunction()">(<%=Eater.all.where(cooker_id: current_user.cooker.id).count %>)</a> patrons to cook for this week</h3> 
-  </div>  
-  
+    <h2 align="center"> Welcome back, <%= current_user.username %></h2>
+    <h3 align="center" id="veiw-patrons"> You have <a onclick="myFunction()">(<%=Eater.all.where(cooker_id: current_user.cooker.id).count %>)</a> patrons to cook for this week</h3>
+  </div>
+
   <div align="center" class="self-profile">
     <%= render partial: "partials/cooker_home", locals: {cooker: current_user.cooker}%>
   </div>
+
+  <%= react_component("PatronList", props: {}, prerender: true) %>
 
   <div class="container patrons" id="patrons" align="left">
       <div class="col-md-3"></div>
@@ -44,10 +46,5 @@
       }
     }
   </script>
-    
+
 </body>
-
-
-
-  
-    
