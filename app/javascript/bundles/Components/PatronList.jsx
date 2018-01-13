@@ -3,7 +3,9 @@ import React from 'react';
 export default class PatronList extends React.Component {
   render() {
     return (
-      <div>patron list</div>
+      this.props.patrons.map((patron) => {
+        return <div>{patron.username}</div>;
+      })
     );
   }
 }

@@ -7,10 +7,10 @@ class CookersController < ApplicationController
 
     def create
       @cooker = Cooker.new(allowed_params.merge({user: current_user}))  #creates new cooker with form params and current user id for user_id column
-      if @cooker.save                                
+      if @cooker.save
         redirect_to '/cooker'             #if saves successfully redirects to /cooker - to routes =>
       else
-        redirect_to :new 
+        redirect_to :new
       end
     end
 
@@ -26,12 +26,12 @@ class CookersController < ApplicationController
     end
 
     def patrons
-      User.all.where(user_type: 1).find_all  do |e|
+      @patrons = User.all.where(user_type: 1).find_all  do |e|
         e.eater.cooker_id == current_user.cooker.id
       end
-    end 
+    end
 
-  
+
 
 private
 

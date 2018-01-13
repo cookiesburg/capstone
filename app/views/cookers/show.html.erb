@@ -11,7 +11,7 @@
     <%= render partial: "partials/cooker_home", locals: {cooker: current_user.cooker}%>
   </div>
 
-  <%= react_component("PatronList", props: {}, prerender: true) %>
+  <%= react_component("PatronList", props: {patrons: patrons}, prerender: true) %>
 
   <div class="container patrons" id="patrons" align="left">
       <div class="col-md-3"></div>
