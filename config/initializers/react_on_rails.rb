@@ -1,6 +1,4 @@
-# frozen_string_literal: true
 
-# See docs/basics/configuration.md for many more options
 
 ReactOnRails.configure do |config|
   # This configures the script to run to build the production assets by webpack. Set this to nil

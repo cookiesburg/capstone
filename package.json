@@ -5,12 +5,15 @@
     "@rails/webpacker": "^3.2.0",
     "babel-preset-react": "^6.24.1",
     "coffeescript": "1.12.7",
+    "css-loader": "^0.28.8",
     "prop-types": "^15.6.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
-    "react-on-rails": "^10.0.2"
+    "react-on-rails": "^10.0.2",
+    "styled-components": "^2.4.0"
   },
   "devDependencies": {
-    "webpack-dev-server": "^2.10.1"
+    "css-loader": "^0.28.8",
+    "webpack-dev-server": "^2.11.0"
   }
 }
