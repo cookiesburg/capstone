@@ -31,8 +31,6 @@ class CookersController < ApplicationController
       end
     end
 
-
-
 private
 
   def allowed_params

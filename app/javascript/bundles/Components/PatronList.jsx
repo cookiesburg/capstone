@@ -1,16 +1,15 @@
 import React from 'react';
-import './style';
 
 export default class PatronList extends React.Component {
   renderNames() {
     return (
       this.props.patrons.map((patron) => {
         return (
-            <li
+            <div
               key={patron.username}
               className='list-group-item'>
               <p>{patron.username}</p>
-            </li>
+            </div>
         );
       })
     );
@@ -19,11 +18,11 @@ export default class PatronList extends React.Component {
     return (
       this.props.patrons.map((patron) => {
         return (
-            <li
+            <div
               key={patron.username}
               className='list-group-item'>
               <p>{patron.email}</p>
-            </li>
+            </div>
         );
       })
     );
