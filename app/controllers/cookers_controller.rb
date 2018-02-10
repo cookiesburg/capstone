@@ -31,14 +31,15 @@ class CookersController < ApplicationController
       end
     end
 
+#   def cooker        this goes in the user controller
+#     Cooker.find_by_user_id(self.id)
+#   end
+
 private
 
   def allowed_params
     return params.require(:cooker).permit(:food_description, :price_per_week, :neighborhood, :delivery_available, :user_id, :dietary_options, :profile_photo)
   end
 
-#   def cooker        this goes in the user controller
-#     Cooker.find_by_user_id(self.id)
-#   end
 
 end

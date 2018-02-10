@@ -15,7 +15,35 @@
  *= require_self
  */
 
+/* landing page */
+.landing-page {
+  display:flex;
+  flex-direction: column;
+}
+  .landing-graphic {
+    display:flex;
+    flex-direction: column;
+    height: 600px;
+    background-color: lightcoral;
+    margin-top: 50px;
+  }
+    .landing-graphic > h1 {
+      margin-top: 250px;
+      margin-left:auto;
+      margin-right:auto;
+    }
+
  /* cooker show page */
+ .cook-welcome {
+   display: flex;
+   flex-direction: column;
+   margin-top: 100px;
+   margin-bottom: 50px;
+ }
+  .cook-welcome >  h3, h4 {
+    margin-left:auto;
+    margin-right:auto;
+  }
 .patron-list {
   display: flex;
   justify-content: center;
@@ -68,11 +96,14 @@
       padding: 0px 10px;
       font-style: italic;
     }
-  .subscribe-button {
-    margin-left:auto;
-    margin-right:auto;
-  }
- /* landing page */
+
+.editme {
+  display:flex;
+}
+ .editme > .btn {
+   margin-left:auto;
+   margin-right:auto;
+ }
 h2, h3, h4 {
   font-family: 'Josefin Sans', sans-serif;s
 }

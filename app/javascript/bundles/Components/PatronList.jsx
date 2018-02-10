@@ -6,9 +6,8 @@ export default class PatronList extends React.Component {
       this.props.patrons.map((patron) => {
         return (
             <div
-              key={patron.username}
               className='list-group-item'>
-              <p>{patron.username}</p>
+              <h4>{patron.username}</h4>
             </div>
         );
       })
@@ -19,9 +18,8 @@ export default class PatronList extends React.Component {
       this.props.patrons.map((patron) => {
         return (
             <div
-              key={patron.username}
               className='list-group-item'>
-              <p>{patron.email}</p>
+              <h4>{patron.email}</h4>
             </div>
         );
       })
@@ -32,9 +30,8 @@ export default class PatronList extends React.Component {
       this.props.patrons.map((patron) => {
         return (
             <div
-              key={patron.username}
               className='list-group-item'>
-              <p>{patron.phone_number}</p>
+              <h4>{patron.phone_number}</h4>
             </div>
         );
       })
