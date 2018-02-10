@@ -1,53 +1,15 @@
 <body id="cooker-home">
-  
+
   <%= render partial: "partials/nav" %>
-   
-  <div class="cooker-welcome">
-    <h2 align="center"> Welcome back, <%= current_user.username %></h2> 
-    <h3 align="center" id="veiw-patrons"> You have <a onclick="myFunction()">(<%=Eater.all.where(cooker_id: current_user.cooker.id).count %>)</a> patrons to cook for this week</h3> 
-  </div>  
-  
-  <div align="center" class="self-profile">
-    <%= render partial: "partials/cooker_home", locals: {cooker: current_user.cooker}%>
+
+  <%= react_component("CookWelcome", props: {patrons: patrons, cook: current_user.username}, prerender: true) %>
+
+  <%= react_component("CookerProfileHome", props: {cooker: @cooker, cook: current_user.username}, prerender: true) %>
+
+  <div class='editme'>
+    <%= link_to "edit", edit_cooker_path(current_user.cooker.id), method: :get, class:"btn btn-info subscribe-button" %>
   </div>
 
-  <div class="container patrons" id="patrons" align="left">
-      <div class="col-md-3"></div>
-      <div class="col-md-2">
-        <h4>Username</h4>
-        <%= patrons.map do |p| %>
-        <%= p.username %> <br/>
-        <% end %>
-      </div>
-      <div class="col-md-2">
-        <h4>Email</h4>
-        <%= patrons.map do |p| %>
-        <%= p.email %> <br/>
-        <% end %>
-      </div>
-      <div class="col-md-2" align="right">
-        <h4>Phone </h4>
-        <%= patrons.map do |p| %>
-        <%= p.phone_number %> <br/>
-        <% end %>
-      </div>
-      <div class="col-md-3"></div>
-  </div>
+  <%= react_component("PatronList", props: {patrons: patrons}, prerender: true) %>
 
-  <script>
-  function myFunction() {
-    var x = document.getElementById("patrons");
-    if (x.style.display === "none") {
-      x.style.display = "block";
-      } else {
-        x.style.display = "none";
-      }
-    }
-  </script>
-    
 </body>
-
-
-
-  
-    

@@ -15,9 +15,97 @@
  *= require_self
  */
 
- /* landing page */
+/* landing page */
+.landing-page {
+  display:flex;
+  flex-direction: column;
+}
+  .landing-graphic {
+    display:flex;
+    flex-direction: column;
+    height: 600px;
+    background-color: lightcoral;
+    margin-top: 50px;
+  }
+    .landing-graphic > h1 {
+      margin-top: 250px;
+      margin-left:auto;
+      margin-right:auto;
+    }
+
+ /* cooker show page */
+ .cook-welcome {
+   display: flex;
+   flex-direction: column;
+   margin-top: 100px;
+   margin-bottom: 50px;
+ }
+  .cook-welcome >  h3, h4 {
+    margin-left:auto;
+    margin-right:auto;
+  }
+.patron-list {
+  display: flex;
+  justify-content: center;
+}
+.patron-list-column {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.cooker-profile-home {
+  margin-left:auto;
+  margin-right:auto;
+  dipslay:flex;
+  width:300px;
+}
+  .photo-box {
+    border:3px solid black;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+  }
+    .photo-box > img {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      border: 3px solid black;
+      cursor: pointer;
+      margin-top: 20px;
+      margin-left:auto;
+      margin-right:auto;
+    }
+    .photo-box > h3 {
+      margin-left:auto;
+      margin-right:auto;
+    }
+  .info-box {
+    display: flex;
+    flex-direction: column;
+    min-height: 300px;
+    border: 3px solid black;
+    justify-content: space-around;
+  }
+    .info-box > div {
+      font-size: 16px;
+      margin-left:auto;
+      margin-right:auto;
+    }
+    .food-description {
+      padding: 0px 10px;
+      font-style: italic;
+    }
+
+.editme {
+  display:flex;
+}
+ .editme > .btn {
+   margin-left:auto;
+   margin-right:auto;
+ }
 h2, h3, h4 {
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: 'Josefin Sans', sans-serif;s
 }
  #landing-page {
    background: rgb(255, 239, 239);
@@ -272,12 +360,6 @@ h2, h3, h4 {
   #cook-id-block {
     color: white;
     background-color: black;
-  }
-  .patrons {
-    font-size: 16px;
-  }
-  #patrons {
-    display: none;
   }
   a {
     cursor: pointer;

@@ -9,6 +9,7 @@
 //
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
+
 //= require rails-ujs
 //= require_self
 //= require sweetalert2
@@ -16,7 +17,7 @@
 //= require turbolinks
 //= require_tree .
 
-   
+
 $(document).ready(function() {
     var typed = new Typed('#typed', {
         stringsElement: '.typed-strings',
