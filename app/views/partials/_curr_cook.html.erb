@@ -1,15 +1,17 @@
 
-<div class='homecook-blurb'>
-    <img src="<%= current_user.eater.cooker.profile_photo%>" class="cooker-img">
-    <h4 align="center"><%= current_user.eater.cooker.user.username%></h4>
-</div>
-<h5 align="center"><a onclick="myFunction()">Details</a></h5>
-<div class="container" id="curr-cook-details">
-        <div><strong>EMAIL:</strong> <%=current_user.eater.cooker.user.email%></div>
-        <div><strong>PHONE:</strong> <%=current_user.eater.cooker.user.phone_number %></div>
-        </br>
-        <div><strong>FOOD DESCRIPTION</strong></div>
-        <div><%= current_user.eater.cooker.food_description%></div>
+<div class='current-cook-container'>
+  <div>
+      <img src="<%= current_user.eater.cooker.profile_photo%>" class="cooker-img">
+      <h4 align="center"><%= current_user.eater.cooker.user.username%></h4>
+  </div>
+  <div align="center"><a onclick="myFunction()">Cook Details</a></div>
+  <div id="curr-cook-details">
+          <div><strong>EMAIL:</strong> <%=current_user.eater.cooker.user.email%></div>
+          <div><strong>PHONE:</strong> <%=current_user.eater.cooker.user.phone_number %></div>
+          </br>
+          <div><strong>FOOD DESCRIPTION</strong></div>
+          <div><%= current_user.eater.cooker.food_description%></div>
+  </div>
 </div>
 
 

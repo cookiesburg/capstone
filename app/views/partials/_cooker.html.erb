@@ -1,15 +1,15 @@
-<div class="wrapper-profile-container self" id="cooker-profile">
-  <div class="wrapper-cook-profile">
+<div id="cooker-profile">
+
     <div class"nested-profile-top">
       <div class="cook-photo-id">
         <div class="cook-photo"><img src="<%= cooker.profile_photo %>" class="cooker-img"></div><br/>
-        <div class="cook-name"><%= User.find_by_id(cooker.user_id).username%></div> 
+        <div class="cook-name"><%= User.find_by_id(cooker.user_id).username%></div>
       </div>
       <div class="cook-stats">
-        <br/>Price Per Week (USD) :  <%= cooker.price_per_week %>
-        <br/>Neighborhood :  <%= cooker.neighborhood %>
-        <br/>Delivery Available? :  <%= cooker.delivery_available == true ? "Yes" : "No" %>
-        <br/>Specialty Diets :  <%= cooker.dietary_options %>  
+        <div><strong>Price </strong>  <%= cooker.price_per_week %></div>
+        <div><strong>Neighborhood: </strong>  <%= cooker.neighborhood %></div>
+        <div><strong>Delivery Available? </strong>  <%= cooker.delivery_available == true ? "Yes" : "No" %></div>
+        <div><strong>Specialty Diet: </strong>  <%= cooker.dietary_options %></div>
       </div>
     </div>
 
@@ -17,13 +17,13 @@
         <%= cooker.food_description %>
     </div>
 
-    <div class="subscribe-button-field">
+    <div>
       <%= form_for (current_user.eater), url: eater_path(current_user.eater.id), method: :patch do |f| %>
       <%= f.hidden_field :cooker_id, :value => cooker.id %>
-      <%= f.submit "Subscribe", class:'btn btn-primary btn-lg btn-block' %>
+      <%= f.submit "Subscribe", class:'button' %>
       <% end %>
     </div>
-  </div>
+
 </div>
 
 <script>

@@ -10,6 +10,7 @@
     <h2 align="center">Search For Homecooks</h2>
         <div class="search-area">
             <%= form_tag("/eater", method: "get") do %>
+
               <%= label_tag(:price, "Weekly Price:") %>
               <%= select_tag 'price', options_for_select([["Any"], ['$'],['$$'],['$$$']]) %>
 
@@ -19,13 +20,13 @@
               <%= label_tag(:location, "Neighborhood:") %>
               <%= select_tag 'location', options_for_select([["All"],['El Poblado'],['Centro'],['Envigado'],['Laurales']]) %>
 
-              <%= label_tag(:delivery, "Delivery Available?:") %>
+              <%= label_tag(:delivery, "Delivery?") %>
               <%= select_tag 'delivery', options_for_select([['Yes'],['No']]) %>
               </br>
+            </div>
 
-              <button class='btn-block btn-primary'><%= submit_tag("FIND ME COOKS") %></button>
+              <div class='search-btn' align="center"><%= submit_tag "SEARCH", class: 'button'%></div>
             <% end %>
-        </div>
   </div>
 
   <div class="search-results">

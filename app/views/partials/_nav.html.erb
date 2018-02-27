@@ -3,9 +3,9 @@
       &#9776;
     </button>
       <div class="collapse navbar-toggleable-xl" id='collapseNav'>
-          <ul class="nav navbar-nav">
-            <li class="nav-item active"><%= link_to "Account", edit_user_registration_path, method: :get %></li>
-            <li class="nav-item active"><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
+          <ul class="dropdown-nav">
+            <li><%= link_to "Account", edit_user_registration_path, method: :get, class: 'nav-option' %></li>
+            <li><%= link_to "Logout", destroy_user_session_path, method: :delete, class: 'nav-option' %></li>
           </ul>
       </div>
 
