@@ -10,14 +10,15 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
 
+ /*
  *= require sweetalert2
  *= require_tree .
  *= require_self
+ *= require font-awesome
  */
 
 /* landing page */
 body {
-
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -74,97 +75,69 @@ body {
   margin-bottom: 100px;
 }
 
-.bottom-landing {
+.how-box {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   width: 90vw;
-}
-
-.bottom-landing > h1 {
-  font-size: 50px;
-  margin-bottom: 50px;
-}
-
-.wrapper-how{
-  display:grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
-}
-.wrapper-how > div {
-  background: rgb(212, 204, 217);;
-  text-align: center;
-  margin:1em;
-  min-height: 30em;
   font-family: 'Josefin Sans', sans-serif;
 }
 
-.wrapper-how-cook {
-  display:grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+.wrapper-how{
+  display:flex;
+  flex-wrap:wrap;
+  width: 100%;
+  justify-content: space-around;
+  margin-bottom: 10em;
 }
-.wrapper-how-eat {
-  display:grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+.wrapper-how > div {
+  background: rgb(212, 204, 217);
+  display: flex;
+  flex-direction: column;
+  width: 40vw;
+  padding: 2em;
 }
+
+.how-row {
+  display: flex;
+  width:100%;
+  text-align: center;
+  justify-content: space-around;
+}
+
+.how-row > div {
+  width:33%;
+  justify-content: space-around;
+}
+
 .glyphicon {
   font-size: 50px;
   text-align: auto;
 }
-.box1-glyph {
-  grid-column:1/2;
-  grid-row:2/3;
+/*forms*/
+
+.form-container {
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ width: 100%;
+ height: 100vh;
 }
-.box2-glyph {
-  grid-column:2/3;
-  grid-row:2/3;
+.login-form {
+  min-width: 40%;
+  padding: 20px;
+  align-self: center;
 }
-.box3-glyph {
-  grid-column:3/4;
-  grid-row:2/3;
+.sign-up-form {
+  min-width: 60%;
 }
-.head {
-  font-size: 18px;
+.edit-user-form {
+  max-width: 60%;
 }
-.box-head {
-  grid-column:2/3;
-  grid-row:1/2;
-  font-size:24px;
-  font-family: 'Josefin Sans', sans-serif;
-  padding-top:15px;
-}
-.box1-head {
-  grid-column:1/2;
-  grid-row:3/4;
-}
-.box2-head {
-  grid-column:2/3;
-  grid-row:3/4;
-}
-.box3-head {
-  grid-column:3/4;
-  grid-row:3/4;
-}
-.desc {
-  padding-left: 5px;
-  padding-right: 5px;
-}
-.box1-desc {
-  grid-column:1/2;
-  grid-row:4/5;
-}
-.box2-desc {
-  grid-column:2/3;
-  grid-row:4/5;
-}
-.box3-desc {
-  grid-column:3/4;
-  grid-row:4/5;
-}
+
  /* cooker show page */
+
  .cook-welcome {
    display: flex;
    flex-direction: column;
@@ -235,11 +208,9 @@ body {
    margin-left:auto;
    margin-right:auto;
  }
-h2, , h4 {
+h2, h4 {
   font-family: 'Josefin Sans', sans-serif;s
 }
-
-
   .wrapper-profile-container {
     display: grid;
   }
@@ -293,24 +264,7 @@ h2, , h4 {
     color: black;
     padding: 5px;
   }
-  .sign-up {
-    background-color:rgb(212, 204, 217);
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-  }
-  .login {
-    background-color: rgb(212, 204, 217);
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-  }
-  #sign-up-form {
-    color: black;
-  }
-  #login-form {
-    color: black;
-  }
+
 
   .panel {
     margin-top: 50px;
@@ -342,22 +296,29 @@ h2, , h4 {
     font-size: 20px;
     color: rgb(132, 78, 173);
   }
-  .nav-bar {
-    position: fixed;
-    top: 0; /* Position the navbar at the top of the page */
-    width: 100%;
-    background-color: rgb(255, 239, 239);
-    background: transparent;
+  nav {
+    width: 100vw;
   }
 
-  /* eater */
+/* eater */
 
-  #eater-home {
-    background: rgb(255, 239, 239);
-    margin-top: 100px;
+.eater-home-head {
+  margin: 10em;
+  display: flex;
+  flex-direction: column;
+}
+
+  .eater-home-head h3 {
+    font-size: 2em;
+    margin-bottom: 1.5em;
   }
-  #eater-show {
-    background-color: pink ;
+
+  #curr-cook-details {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    border:2px solid black;
+    padding: 3em;
   }
 
 
@@ -426,20 +387,26 @@ h2, , h4 {
   #curr-cook-details {
     display: none;
   }
-  #search-area {
+
+  .search-container {
+
+  }
+  .search-area {
     background: rgb(212, 204, 217);
     margin-bottom: 40px;
     padding: 30px;
-    border-radius: 6px 6px 6px 6px;
-  }
-  #search-header {
-    font-family: 'Josefin Sans', sans-serif;
+    font-size: 1.3em;
+    display: flex;
   }
 
   .search-results {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: auto;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-around;
+  }
+  .search-result {
+    width: 400px;
   }
 
   .grid {

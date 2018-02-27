@@ -1,10 +1,5 @@
-<body class="login">
-  <div class="panel panel-default col-md-5 col-md-offset-3">
-    <div class="panel-body">
-
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-6 col-md-4" id="login-form">     
+<div class='form-container'>
+          <div class='login-form'>
             <h2>Login</h2>
 
             <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
@@ -32,9 +27,4 @@
 
             <%= render "devise/shared/links" %>
           </div>
-        </div>
-      </div>
-      
-    </div>
-  <div>
-</body>
+</div>

@@ -1,12 +1,12 @@
-  <nav class="nav-bar">
-    <div class="container-fluid">
-
-      <div class="collapse navbar-collapse" id="mainNav">
-        <ul class="nav navbar-nav navbar-right">
-          <li id="nav-link"><%= link_to "Account", edit_user_registration_path, method: :get %></li>
-          <li id="nav-link"><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
-        </ul>
+  <nav class="navbar navbar-dark fixed-top">
+    <button class='navbar-toggler' type='button' data-toggle='collapse' data-target='#collapseNav'>
+      &#9776;
+    </button>
+      <div class="collapse navbar-toggleable-xl" id='collapseNav'>
+          <ul class="nav navbar-nav">
+            <li class="nav-item active"><%= link_to "Account", edit_user_registration_path, method: :get %></li>
+            <li class="nav-item active"><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
+          </ul>
       </div>
 
-    </div>
   </nav>

@@ -1,22 +1,17 @@
 
-<div class="container">
-    <div align="center"><img src="<%= current_user.eater.cooker.profile_photo%>" class="cooker-img"></div>
-    <h4 align="center" class="cook-name"><%= current_user.eater.cooker.user.username%></h4>
+<div class='homecook-blurb'>
+    <img src="<%= current_user.eater.cooker.profile_photo%>" class="cooker-img">
+    <h4 align="center"><%= current_user.eater.cooker.user.username%></h4>
 </div>
 <h5 align="center"><a onclick="myFunction()">Details</a></h5>
 <div class="container" id="curr-cook-details">
-    <div class="col-md-4"></div>
-    <div class="col-md-4">
-        <h4>Contact</h4>
-        email: <%=current_user.eater.cooker.user.email%></br>
-        phone: <%=current_user.eater.cooker.user.phone_number %></br>
-        <h4>Description</h4>
-        <%= current_user.eater.cooker.food_description%>
-    </div>
-    <div class="col-md-4"></div>
+        <div><strong>EMAIL:</strong> <%=current_user.eater.cooker.user.email%></div>
+        <div><strong>PHONE:</strong> <%=current_user.eater.cooker.user.phone_number %></div>
+        </br>
+        <div><strong>FOOD DESCRIPTION</strong></div>
+        <div><%= current_user.eater.cooker.food_description%></div>
 </div>
-</br>
-</br>
+
 
 <script>
 function myFunction() {
@@ -28,4 +23,3 @@ function myFunction() {
     }
   }
 </script>
-
