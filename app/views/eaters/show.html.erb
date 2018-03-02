@@ -1,36 +1,39 @@
   <%= render :partial => "partials/nav" %>
 
-  <div class='eater-home-head'>
-    <h3 align="center">Current Homecook:</h3>
+  <div class='eater-container'>
 
-    <%= render :partial =>"partials/curr_cook" if current_user.eater.cooker != nil %>
-  </div>
+    <div class='eater-home-head'>
+      <h3 align="center">Current Homecook:</h3>
 
-  <div class="search-container">
-    <h2 align="center">Search For Homecooks</h2>
-        <div class="search-area">
-            <%= form_tag("/eater", method: "get") do %>
+      <%= render :partial =>"partials/curr_cook" if current_user.eater.cooker != nil %>
+    </div>
 
-              <%= label_tag(:price, "Weekly Price:") %>
-              <%= select_tag 'price', options_for_select([["Any"], ['$'],['$$'],['$$$']]) %>
+    <div class="search-container">
+      <h2 align="center">Search For Homecooks</h2>
+      <div class="search-area">
+        <%= form_tag("/eater", method: "get") do %>
 
-              <%= label_tag(:diet, "Special Diet:") %>
-              <%= select_tag 'diet', options_for_select([['None'],['Vegetarian'],['Vegan'],['Pescatarian']]) %>
+          <%= label_tag(:price, "Weekly Price:") %>
+          <%= select_tag 'price', options_for_select([["Any"], ['$'],['$$'],['$$$']]) %>
 
-              <%= label_tag(:location, "Neighborhood:") %>
-              <%= select_tag 'location', options_for_select([["All"],['El Poblado'],['Centro'],['Envigado'],['Laurales']]) %>
+          <%= label_tag(:diet, "Special Diet:") %>
+          <%= select_tag 'diet', options_for_select([['None'],['Vegetarian'],['Vegan'],['Pescatarian']]) %>
 
-              <%= label_tag(:delivery, "Delivery?") %>
-              <%= select_tag 'delivery', options_for_select([['Yes'],['No']]) %>
-              </br>
-            </div>
+          <%= label_tag(:location, "Neighborhood:") %>
+          <%= select_tag 'location', options_for_select([["All"],['El Poblado'],['Centro'],['Envigado'],['Laurales']]) %>
 
-              <div class='search-btn' align="center"><%= submit_tag "SEARCH", class: 'button'%></div>
-            <% end %>
-  </div>
+          <%= label_tag(:delivery, "Delivery?") %>
+          <%= select_tag 'delivery', options_for_select([['Yes'],['No']]) %>
+          </br>
+      </div>
 
-  <div class="search-results">
-    <% @cookers.each do |cook| %>
-    <div class='search-result'><%= render :partial => "partials/cooker", locals: {cooker: cook} %></div>
-    <% end %>
+      <div class='search-btn' align="center"><%= submit_tag "SEARCH", class: 'button'%></div>
+          <% end %>
+    </div>
+
+    <div class="search-results">
+      <% @cookers.each do |cook| %>
+      <div class='search-result'><%= render :partial => "partials/cooker", locals: {cooker: cook} %></div>
+      <% end %>
+    </div>
   </div>

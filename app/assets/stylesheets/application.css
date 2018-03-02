@@ -18,52 +18,291 @@
  */
 
 /* landing page */
+
+@media only screen and (max-width : 900px) {
+  /******navbar******/
+  nav {
+    width: 100vw;
+  }
+  .dropdown-nav {
+    background:black;
+    width: 10em;
+    padding: 1em;
+  }
+  .nav-option {
+    background: black;
+    color: white;
+    font-size: 1.1em;
+  }
+  .nav-option:hover {
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+  }
+  ul {
+    list-style-type:  none;
+  }
+  li {
+    margin-bottom: .8em;
+  }
+
+/*******landing page**********/
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .welcome-links {
+    width:100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  .welcome-head {
+    height: 30vh;
+    background-image: url('https://images.unsplash.com/photo-1463490093487-b0ffe9b8e140?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=fd7561cb19fe69d1809ff2df9b7ddf39&auto=format&fit=crop&w=1050&q=80');
+    background-position: center;
+    color: black;
+    background-size: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 95vw;
+    text-align: center;
+    margin-top: 2.5em;
+    border-radius: 3px;
+    border:3px solid black;
+  }
+  .welcome-head > div {
+    font-size: 4em;
+    color: white;
+    font-weight: bold;
+  }
+  .welcome-head > h3 {
+    font-size: 1em;
+    font-weight: bold;
+  }
+  .about-us {
+    margin-top: 5em;
+    font-size: 1em;
+    font-family: 'Josefin Sans', sans-serif;
+    width: 80vw;
+    display: block;
+  }
+  .how-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 90vw;
+    font-family: 'Josefin Sans', sans-serif;
+    margin-top: 5em;
+  }
+  .wrapper-how{
+    display:flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 2em;
+  }
+  .wrapper-how > div {
+    width: 100%;
+    background: rgb(212, 204, 217);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2em;
+    padding:.5em;
+  }
+  .how-header {
+    width: 100%;
+    font-size: 1.5em;
+    justify-content: center;
+    margin-bottom: 1em;
+  }
+  .how-row {
+    display: flex;
+    width:100%;
+    text-align: center;
+  }
+  .how-row > div,h5 {
+    width:33%;
+    justify-content: space-between;
+  }
+  .how-row > div {
+    font-size: .8em;
+  }
+
+
+/****** eater ********/
+
+
+  .eater-container {
+    margin-top: 3em;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  .eater-home-head {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+  }
+    .eater-home-head h3 {
+      font-size: 1.5em;
+      margin-bottom: 1em;
+    }
+    .current-cook-container {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    .current-cook-container {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    #curr-cook-details {
+      display: flex;
+      flex-direction: column;
+      width: 50%;
+      border:2px solid black;
+      padding: 3em;
+      border-radius: 3%;
+    }
+    .cooker-home-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .cook-home-top {
+      margin-top: 150px;
+    }
+    #cook-id-block {
+      color: white;
+      background-color: black;
+    }
+    a {
+      cursor: pointer;
+    }
+    .cooker-img {
+      width: 12em;
+      height: 12em;
+      border-radius: 50%;
+      border: 3px solid black;
+      display: block;
+      margin-left:auto;
+      margin-right:auto;
+      cursor: pointer;
+    }
+    .search-container {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      justify-content: center;
+      align-items: center;
+      margin-top:3em;
+      margin-bottom: 3em;
+    }
+    .search-container h2 {
+      font-size: 1.8em;
+    }
+    .search-area {
+      background: rgb(212, 204, 217);
+      font-size: 1em;
+      display: flex;
+      flex-direction: column;
+    }
+    .search-results {
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+      justify-content: space-around;
+    }
+    .search-result {
+      width: 27em;
+      padding: 1em;
+      margin-bottom: 4em;
+    }
+  .search-btn {
+    display: flex;
+    justify-content: center;
+  }
+  .about-cook {
+    font-style: italic;
+    margin-top: 1em;
+    margin-bottom: .5em;
+  }
+  .cook-name {
+    font-size: 1.5em;
+    text-align: center;
+    font-family: 'Josefin Sans', sans-serif;
+  }
+  .cook-stats {
+    padding:.8em;
+  }
+
+
+}
+
+
+@media only screen and (min-width : 901px) {
+
+  /******navbar******/
+  nav {
+    width: 100vw;
+  }
+  .dropdown-nav {
+    background:black;
+    width: 10em;
+    padding: 1em;
+  }
+  .nav-option {
+    background: black;
+    color: white;
+    font-size: 1.1em;
+  }
+  .nav-option:hover {
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+  }
+  ul {
+    list-style-type:  none;
+  }
+  li {
+    margin-bottom: .8em;
+  }
+
+
 body {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-
 .welcome-head {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 20vh;
-}
-
-.title-box {
+  height: 80vh;
   background-image: url('https://images.unsplash.com/photo-1463490093487-b0ffe9b8e140?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=fd7561cb19fe69d1809ff2df9b7ddf39&auto=format&fit=crop&w=1050&q=80');
   background-position: center;
-  color: white;
   background-size: auto;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  height: 80vh;
-  width: 90vw;
-  background-color: white;
-  margin: auto;
+  justify-content: space-around;
+  width: 95vw;
   text-align: center;
-  margin-top: 40px;
+  margin-top: 2.5em;
   border-radius: 3px;
+  margin-bottom: 7em;
 }
-
-.title-box > div {
-  font-size: 110px;
-  font-weight: bold;
-  -webkit-text-stroke-width: 2px;
-  -webkit-text-stroke-color: black;
-  margin-bottom: 30px;
+.welcome-head > div {
+  font-size: 12em;
+  color: white;
 }
-
-.title-box > h3 {
-  font-size: 40px;
-  font-weight: bold;
-  -webkit-text-stroke-width: 2px;
-  -webkit-text-stroke-color: black;
-}
-
 .about-us {
   font-size: 25px;
   font-family: 'Josefin Sans', sans-serif;
@@ -71,46 +310,42 @@ body {
   display: block;
   margin-bottom: 5em;
 }
-
 .how-box {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 90vw;
+  width: 100%;
   font-family: 'Josefin Sans', sans-serif;
 }
-
 .wrapper-how{
   display:flex;
   flex-wrap:wrap;
   width: 100%;
   justify-content: space-around;
-  margin-bottom: 10em;
+  margin-bottom: 8em;
 }
 .wrapper-how > div {
   background: rgb(212, 204, 217);
   display: flex;
   flex-direction: column;
-  width: 40vw;
+  width: 45%;
   padding: 2em;
 }
-
 .how-row {
   display: flex;
   width:100%;
   text-align: center;
   justify-content: space-around;
 }
-
 .how-row > div,h5 {
   width:33%;
   justify-content: space-between;
 }
-
 .how-header {
   margin-bottom: 1.5em;
 }
+
 /*forms*/
 
 .form-container {
@@ -119,6 +354,7 @@ body {
  justify-content: center;
  width: 100%;
  height: 100%;
+ margin-top: 3em;
 }
 .login-form {
   min-width: 40%;
@@ -132,36 +368,7 @@ body {
   max-width: 60%;
 }
 .edit-account-form {
-
 }
-
-/***** navbar ******/
-
-nav {
-  width: 100vw;
-}
-.dropdown-nav {
-  background:black;
-  width: 10em;
-  padding: 1em;
-}
-.nav-option {
-  background: black;
-  color: white;
-  font-size: 1.1em;
-}
-.nav-option:hover {
-  font-weight: bold;
-  text-decoration: none;
-  color: white;
-}
-ul {
-  list-style-type:  none;
-}
-li {
-  margin-bottom: .8em;
-}
-
 
  /***** cooker show page *****/
 
@@ -250,21 +457,15 @@ h2, h4 {
     background: white;
     border-bottom: 3px solid black;
   }
-  .cook-stats {
-    padding:1.5em;
-    display: flex;
-    flex-direction: column;
-  }
   .about-cook {
     font-style: italic;
     padding:1.5em;
-    max-height: ;
+    margin-bottom: 1em;
   }
   .cook-name {
-    font-size: 24px;
+    font-size: 1.5em;
     text-align: center;
     font-family: 'Josefin Sans', sans-serif;
-    color:black;
   }
   .cook-photo {
     padding-top: 1em;
@@ -313,36 +514,31 @@ h2, h4 {
 
 /* eater */
 
-.eater-home-head {
-  margin: 10em;
-  display: flex;
-  flex-direction: column;
+.eater-container {
+  width: 70%;
 }
-
+.eater-home-head {
+  margin: 8em;
+}
   .eater-home-head h3 {
-    font-size: 2em;
-    margin-bottom: 1.5em;
+    font-size: 2.2em;
+    margin-bottom: 1.2em;
   }
-
   .current-cook-container {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
   #curr-cook-details {
     display: flex;
     flex-direction: column;
     width: 50%;
     border:2px solid black;
     padding: 3em;
-    background: #27033B;
-    color: white;
     border-radius: 3%;
   }
-
   .cooker-home-container {
     display: flex;
     flex-direction: column;
@@ -357,9 +553,7 @@ h2, h4 {
   }
   a {
     cursor: pointer;
-
   }
-
   #cooker-profile {
     margin: 3em;
     display: flex;
@@ -367,7 +561,6 @@ h2, h4 {
     justify-content: center;
     align-content: center;
   }
-
   #cook-name {
     font-size: 24px;
     text-align: center;
@@ -375,7 +568,6 @@ h2, h4 {
     font-family: 'Josefin Sans', sans-serif;
     color: black;
   }
-
   #cook-info-eater {
     text-align: center;
   }
@@ -498,3 +690,5 @@ h2, h4 {
   .actions {
     padding: 5px;
   }
+
+}
