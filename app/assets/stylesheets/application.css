@@ -385,28 +385,30 @@ body {
 .patron-list {
   display: flex;
   justify-content: center;
+  margin-top: 5em;
 }
 .patron-list-column {
-  width: 300px;
+  width: 30%;
   display: flex;
   flex-direction: column;
   text-align: center;
+  justify-content: space-between;
 }
 .cooker-profile-home {
   margin-left:auto;
   margin-right:auto;
-  dipslay:flex;
-  width:300px;
+  display:flex;
+  flex-direction: column;
+  width:60%
 }
   .photo-box {
-    border:3px solid black;
     background-color: white;
     display: flex;
     flex-direction: column;
   }
     .photo-box > img {
-      width: 200px;
-      height: 200px;
+      width: 15em;
+      height: 15em;
       border-radius: 50%;
       border: 3px solid black;
       cursor: pointer;
@@ -422,7 +424,6 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 300px;
-    border: 3px solid black;
     justify-content: space-around;
   }
     .info-box > div {
@@ -437,11 +438,9 @@ body {
 
 .editme {
   display:flex;
+  justify-content: center;
 }
- .editme > .btn {
-   margin-left:auto;
-   margin-right:auto;
- }
+
 h2, h4 {
   font-family: 'Josefin Sans', sans-serif;s
 }
@@ -543,6 +542,7 @@ h2, h4 {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    max-width: 70%;
   }
   .cook-home-top {
     margin-top: 150px;

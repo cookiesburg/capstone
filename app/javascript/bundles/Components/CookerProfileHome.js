@@ -10,10 +10,10 @@ export default class CookerProfileHome extends React.Component {
         </div>
         <div className='info-box'>
           <div>
-            <div>Weekly Price: {this.props.cooker.price_per_week}</div>
-            <div>Neighborhood: {this.props.cooker.neighborhood}</div>
-            <div>Specialty Diet: {this.props.cooker.dietary_options}</div>
-            <div>Delivery Available: {this.props.cooker.delivery_available == true? 'Yes' : 'No'}</div>
+            <div><strong>Price: </strong> {this.props.cooker.price_per_week}</div>
+            <div><strong>Neighborhood: </strong> {this.props.cooker.neighborhood}</div>
+            <div><strong>Specialty Diet: </strong> {this.props.cooker.dietary_options}</div>
+            <div><strong>Delivery? </strong> {this.props.cooker.delivery_available == true? 'Yes' : 'No'}</div>
           </div>
           <div className='food-description'>{this.props.cooker.food_description}</div>
         </div>
