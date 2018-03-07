@@ -10,12 +10,12 @@
         <div><strong>Neighborhood: </strong>  <%= cooker.neighborhood %></div>
         <div><strong>Delivery Available? </strong>  <%= cooker.delivery_available == true ? "Yes" : "No" %></div>
         <div><strong>Specialty Diet: </strong>  <%= cooker.dietary_options %></div>
+        <div class="about-cook">
+          <%= cooker.food_description %>
+        </div>
       </div>
     </div>
 
-    <div class="about-cook">
-        <%= cooker.food_description %>
-    </div>
 
     <div>
       <%= form_for (current_user.eater), url: eater_path(current_user.eater.id), method: :patch do |f| %>

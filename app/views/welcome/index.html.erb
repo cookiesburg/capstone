@@ -15,48 +15,55 @@
           <h3>A community-driven approach to better food.</h3>
       </div>
     </div>
-
-
-    <div>
-      <p class="about-us">
-        SoupLady is an online platform that connects local homecooks with community members seeking more affordable,
-        healthier and locally sourced meal options.
-      </p>
-    </div>
-
-
-    <div class='how-box'>
-      <h1>How it Works</h1>
-
-      <div class="wrapper-how">
-
-        <div>
-          <h2 class="how-row how-header">EATERS</h2>
-            <div class='how-row'>
-              <h5>Search</h5>
-              <h5>Subscribe</h5>
-              <h5>Pay</h5>
-            </div>
-          <div class='how-row'>
-              <div>Search through homecooks by location, delivery type and dietary restriction</div>
-              <div>Read through cooker profiles and subscribe to homecook of your choice</div>
-              <div>Pay for week of meals upfront - don't worry, payments will be held in eschrow to assure quality</div>
-          </div>
-        </div>
-
-        <div>
-          <h2 class="how-row how-header">COOKS</h2>
-          <div class='how-row'>
-            <h5>Create Profile</h5>
-            <h5>Cook</h5>
-            <h5>Get Paid</h5>
-          </div>
-          <div class='how-row'>
-            <div>Sign up as a homecook and create a profile from which prospective patrons can veiw you</div>
-            <div>Create quality meal options up to the standards you have publicly stated</div>
-            <div>Recieve payments at the end of every week via an online transfer from SouplLady</div>
-          </div>
-        </div>
+    <div class="home-login">
+      <div id="login-btn"><%= link_to 'Login', new_user_session_path, method: :get, class:"btn btn-light"%></div>
     </div>
   </div>
+
+  <div class="welcome-head">
+        <div>SoupLady</div>
+        <h3>A community-driven approach to better food.</h3>
+  </div>
+
+  <div>
+    <p class="about-us">
+      SoupLady is an online platform that connects local homecooks with community members seeking more affordable,
+      healthier and locally sourced meal options.
+    </p>
+  </div>
+
+  <div class='how-box'>
+    <h1>How it Works</h1>
+
+    <div class="wrapper-how">
+
+      <div>
+        <h2 class="how-row how-header">EATERS</h2>
+          <div class='how-row'>
+            <h5>Search</h5>
+            <h5>Subscribe</h5>
+            <h5>Pay</h5>
+          </div>
+        <div class='how-row'>
+            <div>Search through homecooks by location, delivery type and dietary restriction</div>
+            <div>Read through cooker profiles and subscribe to homecook of your choice</div>
+            <div>Pay for week of meals upfront - don't worry, payments will be held in eschrow to assure quality</div>
+        </div>
+      </div>
+
+      <div>
+        <h2 class="how-row how-header">COOKS</h2>
+        <div class='how-row'>
+          <h5>Create</h5>
+          <h5>Cook</h5>
+          <h5>Get Paid</h5>
+        </div>
+        <div class='how-row'>
+          <div>Sign up as a homecook and create a profile from which prospective patrons can veiw you</div>
+          <div>Create quality meal options up to the standards you have publicly stated</div>
+          <div>Recieve payments at the end of every week via an online transfer from SouplLady</div>
+        </div>
+      </div>
+  </div>
+</div>
 </body>

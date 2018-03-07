@@ -19,197 +19,166 @@
 
 /* landing page */
 
-@media only screen and (max-width: 1024px) {
+
+
+@media only screen and (min-width : 901px) {
+
+  /******navbar******/
+  nav {
+    width: 100vw;
+  }
+  .dropdown-nav {
+    background:black;
+    width: 10em;
+    padding: 1em;
+  }
+  .nav-option {
+    background: black;
+    color: white;
+    font-size: 1.1em;
+  }
+  .nav-option:hover {
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+  }
+  ul {
+    list-style-type:  none;
+  }
+  li {
+    margin-bottom: .8em;
+  }
+
+
 body {
-  width: 100%;
-  padding:0;
-  margin:0;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-
-.welcome-nav {
-  width:100%;
-  display: flex;
-  justify-content: space-between;
-}
-
 .welcome-head {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 5em;
-  width:100%;
-}
-
-.title-box {
+  height: 80vh;
   background-image: url('https://images.unsplash.com/photo-1463490093487-b0ffe9b8e140?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=fd7561cb19fe69d1809ff2df9b7ddf39&auto=format&fit=crop&w=1050&q=80');
   background-position: center;
-  color: white;
   background-size: auto;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  height: 80vh;
-  width: 90vw;
-  background-color: white;
-  margin: auto;
+  justify-content: space-around;
+  width: 95vw;
   text-align: center;
+  margin-top: 2.5em;
   border-radius: 3px;
+  margin-bottom: 7em;
+}
+.welcome-head > div {
+  font-size: 12em;
+  color: white;
+}
+.about-us {
+  font-size: 25px;
+  font-family: 'Josefin Sans', sans-serif;
+  width: 60vw;
+  display: block;
+  margin-bottom: 5em;
+}
+.how-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  font-family: 'Josefin Sans', sans-serif;
+}
+.wrapper-how{
+  display:flex;
+  flex-wrap:wrap;
+  width: 100%;
+  justify-content: space-around;
+  margin-bottom: 8em;
+}
+.wrapper-how > div {
+  background: rgb(212, 204, 217);
+  display: flex;
+  flex-direction: column;
+  width: 45%;
+  padding: 2em;
+}
+.how-row {
+  display: flex;
+  width:100%;
+  text-align: center;
+  justify-content: space-around;
+}
+.how-row > div,h5 {
+  width:33%;
+  justify-content: space-between;
+}
+.how-header {
+  margin-bottom: 1.5em;
+}
+
+/*forms*/
+
+.form-container {
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ width: 100%;
+ height: 100%;
+ margin-top: 3em;
+}
+.login-form {
+  min-width: 40%;
+  padding: 20px;
+  align-self: center;
+}
+.sign-up-form {
+  min-width: 60%;
+}
+.edit-user-form {
+  max-width: 60%;
+}
+.edit-account-form {
+}
+
+ /***** cooker show page *****/
+
+ .cook-welcome {
+   display: flex;
+   flex-direction: column;
+   margin-top: 100px;
+   margin-bottom: 50px;
+ }
+  .cook-welcome >  h3, h4 {
+    margin-left:auto;
+    margin-right:auto;
+  }
+.patron-list {
+  display: flex;
+  justify-content: center;
   margin-top: 5em;
 }
-
-.title-box > div {
-  font-size: 5em;
-  font-weight: bold;
-  color: black;
-  margin-bottom: 30px;
-}
-
-.title-box > h3 {
-  font-size: 2em;
-  font-weight: bold;
-  color:black;
-}
-
-.about-us {
-  font-size: 25px;
-  font-family: 'Josefin Sans', sans-serif;
-  width: 60vw;
-  display: block;
-  margin-bottom: 5em;
-}
-
-.how-box {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 90vw;
-  font-family: 'Josefin Sans', sans-serif;
-}
-
-.wrapper-how{
-  display:flex;
-  flex-wrap:wrap;
-  width: 100%;
-  justify-content: space-around;
-  margin-bottom: 10em;
-}
-.wrapper-how > div {
-  background: rgb(212, 204, 217);
-  display: flex;
-  flex-direction: column;
-  width: 40vw;
-  padding: 2em;
-}
-
-.how-row {
-  display: flex;
-  width:100%;
-  text-align: center;
-  justify-content: space-around;
-}
-
-.how-row > div,h5 {
-  width:33%;
-  justify-content: space-between;
-}
-
-.how-header {
-  margin-bottom: 1.5em;
-}
-/*forms*/
-
-.form-container {
- display: flex;
- align-items: center;
- justify-content: center;
- width: 100%;
- height: 100%;
-}
-.login-form {
-  min-width: 40%;
-  padding: 20px;
-  align-self: center;
-}
-.sign-up-form {
-  min-width: 60%;
-}
-.edit-user-form {
-  max-width: 60%;
-}
-.edit-account-form {
-
-}
-
-/***** navbar ******/
-
-nav {
-  width: 100vw;
-}
-.dropdown-nav {
-  background:black;
-  width: 10em;
-  padding: 1em;
-}
-.nav-option {
-  background: black;
-  color: white;
-  font-size: 1.1em;
-}
-.nav-option:hover {
-  font-weight: bold;
-  text-decoration: none;
-  color: white;
-}
-ul {
-  list-style-type:  none;
-}
-li {
-  margin-bottom: .8em;
-}
-
-
- /***** cooker show page *****/
-
- .cook-welcome {
-   display: flex;
-   flex-direction: column;
-   margin-top: 100px;
-   margin-bottom: 50px;
- }
-  .cook-welcome >  h3, h4 {
-    margin-left:auto;
-    margin-right:auto;
-  }
-.patron-list {
-  display: flex;
-  justify-content: center;
-}
 .patron-list-column {
-  width: 300px;
+  width: 30%;
   display: flex;
   flex-direction: column;
   text-align: center;
+  justify-content: space-between;
 }
 .cooker-profile-home {
   margin-left:auto;
   margin-right:auto;
-  dipslay:flex;
-  width:300px;
+  display:flex;
+  flex-direction: column;
+  width:60%
 }
   .photo-box {
-    border:3px solid black;
     background-color: white;
     display: flex;
     flex-direction: column;
   }
     .photo-box > img {
-      width: 200px;
-      height: 200px;
+      width: 15em;
+      height: 15em;
       border-radius: 50%;
       border: 3px solid black;
       cursor: pointer;
@@ -225,7 +194,6 @@ li {
     display: flex;
     flex-direction: column;
     min-height: 300px;
-    border: 3px solid black;
     justify-content: space-around;
   }
     .info-box > div {
@@ -240,11 +208,9 @@ li {
 
 .editme {
   display:flex;
+  justify-content: center;
 }
- .editme > .btn {
-   margin-left:auto;
-   margin-right:auto;
- }
+
 h2, h4 {
   font-family: 'Josefin Sans', sans-serif;s
 }
@@ -260,21 +226,15 @@ h2, h4 {
     background: white;
     border-bottom: 3px solid black;
   }
-  .cook-stats {
-    padding:1.5em;
-    display: flex;
-    flex-direction: column;
-  }
   .about-cook {
     font-style: italic;
     padding:1.5em;
-    max-height: ;
+    margin-bottom: 1em;
   }
   .cook-name {
-    font-size: 24px;
+    font-size: 1.5em;
     text-align: center;
     font-family: 'Josefin Sans', sans-serif;
-    color:black;
   }
   .cook-photo {
     padding-top: 1em;
@@ -323,40 +283,36 @@ h2, h4 {
 
 /* eater */
 
-.eater-home-head {
-  margin: 10em;
-  display: flex;
-  flex-direction: column;
+.eater-container {
+  width: 70%;
 }
-
+.eater-home-head {
+  margin: 8em;
+}
   .eater-home-head h3 {
-    font-size: 2em;
-    margin-bottom: 1.5em;
+    font-size: 2.2em;
+    margin-bottom: 1.2em;
   }
-
   .current-cook-container {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
   #curr-cook-details {
     display: flex;
     flex-direction: column;
     width: 50%;
     border:2px solid black;
     padding: 3em;
-    background: #27033B;
-    color: white;
     border-radius: 3%;
   }
-
   .cooker-home-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    max-width: 70%;
   }
   .cook-home-top {
     margin-top: 150px;
@@ -367,9 +323,7 @@ h2, h4 {
   }
   a {
     cursor: pointer;
-
   }
-
   #cooker-profile {
     margin: 3em;
     display: flex;
@@ -377,7 +331,6 @@ h2, h4 {
     justify-content: center;
     align-content: center;
   }
-
   #cook-name {
     font-size: 24px;
     text-align: center;
@@ -385,501 +338,6 @@ h2, h4 {
     font-family: 'Josefin Sans', sans-serif;
     color: black;
   }
-
-  #cook-info-eater {
-    text-align: center;
-  }
-  #cooker-summary {
-    font-family: 'Asap Condensed', sans-serif;
-    font-size: 16px;
-    border-radius: 5px ;
-    background: rgba(127, 236, 100, 0.5);
-  }
-  .self-profile{
-    margin-top: 250px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%)
-  }
-  .cooker-welcome {
-    margin-top: 150px;
-    text-align: center;
-    }
-  }
-
-  #search-box {
-    margin-top: 100px;
-  }
-  .own {
-    height: 220px;
-    width: 220px;
-  }
-  .own-name {
-    font-size: 45px;
-  }
-  #curr-cook-details {
-    display: none;
-  }
-
-  .search-container {
-    display: flex;
-    flex-direction: column;
-    min-width: 50%;
-    justify-content: center;
-    margin-bottom: 8em;
-  }
-  .search-area {
-    background: rgb(212, 204, 217);
-    margin-bottom: 40px;
-    padding: 2em;
-    font-size: 1.3em;
-    display: flex;
-    flex-wrap: wrap;
-  }
-
-  .search-results {
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-    justify-content: space-around;
-  }
-  .search-result {
-    width: 27em;
-  }
-
-.search-btn {
-  display: flex;
-  justify-content: center;
-}
-
-.button {
- z-index: 99;
- position: absolute;
- display: flex;
- justify-content: center;
- align-items: center;
- width: 300px;
- height: 40px;
- background: black;
- border-radius: 20px;
- color: #FFF;
- font-size: 20px;
- letter-spacing: 1px;
- font-weight: 200;
-}
-
-
-.button:hover {
-  cursor: pointer;
-  transform: scale(1.05);
-}
-  .grid {
-    display: block;
-    margin: auto;
-    text-align: center;
-  }
-
-  .btn {
-    padding: 10px 16px;
-    font-size: 20px;
-    width:80px;
-    height:50px;
-    color: black;
-    text-align: center;
-    font-family: 'Josefin Sans', sans-serif;
-  }
-
-
-  .sign-up-btn {
-    width:100px;
-  }
-  .home-signup {
-    position: absolute;
-    left: 0em;
-    top: 0em;
-  }
-  .home-login {
-    position: absolute;
-    right: 1em;
-    top: 0em;
-  }
-  .actions {
-    padding: 5px;
-  }
-
-}
-
-
-
-
-
-
-
-
-
-
-
-@media only screen and (min-width: 1024px) {
-body {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.welcome-head {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 20vh;
-}
-
-.title-box {
-  background-image: url('https://images.unsplash.com/photo-1463490093487-b0ffe9b8e140?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=fd7561cb19fe69d1809ff2df9b7ddf39&auto=format&fit=crop&w=1050&q=80');
-  background-position: center;
-  color: white;
-  background-size: auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height: 80vh;
-  width: 90vw;
-  background-color: white;
-  margin: auto;
-  text-align: center;
-  margin-top: 40px;
-  border-radius: 3px;
-}
-
-.title-box > div {
-  font-size: 110px;
-  font-weight: bold;
-  -webkit-text-stroke-width: 2px;
-  -webkit-text-stroke-color: black;
-  margin-bottom: 30px;
-}
-
-.title-box > h3 {
-  font-size: 40px;
-  font-weight: bold;
-  -webkit-text-stroke-width: 2px;
-  -webkit-text-stroke-color: black;
-}
-
-.about-us {
-  font-size: 25px;
-  font-family: 'Josefin Sans', sans-serif;
-  width: 60vw;
-  display: block;
-  margin-bottom: 5em;
-}
-
-.how-box {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 90vw;
-  font-family: 'Josefin Sans', sans-serif;
-}
-
-.wrapper-how{
-  display:flex;
-  flex-wrap:wrap;
-  width: 100%;
-  justify-content: space-around;
-  margin-bottom: 10em;
-}
-.wrapper-how > div {
-  background: rgb(212, 204, 217);
-  display: flex;
-  flex-direction: column;
-  width: 40vw;
-  padding: 2em;
-}
-
-.how-row {
-  display: flex;
-  width:100%;
-  text-align: center;
-  justify-content: space-around;
-}
-
-.how-row > div,h5 {
-  width:33%;
-  justify-content: space-between;
-}
-
-.how-header {
-  margin-bottom: 1.5em;
-}
-/*forms*/
-
-.form-container {
- display: flex;
- align-items: center;
- justify-content: center;
- width: 100%;
- height: 100%;
-}
-.login-form {
-  min-width: 40%;
-  padding: 20px;
-  align-self: center;
-}
-.sign-up-form {
-  min-width: 60%;
-}
-.edit-user-form {
-  max-width: 60%;
-}
-.edit-account-form {
-
-}
-
-/***** navbar ******/
-
-nav {
-  width: 100vw;
-}
-.dropdown-nav {
-  background:black;
-  width: 10em;
-  padding: 1em;
-}
-.nav-option {
-  background: black;
-  color: white;
-  font-size: 1.1em;
-}
-.nav-option:hover {
-  font-weight: bold;
-  text-decoration: none;
-  color: white;
-}
-ul {
-  list-style-type:  none;
-}
-li {
-  margin-bottom: .8em;
-}
-
-
- /***** cooker show page *****/
-
- .cook-welcome {
-   display: flex;
-   flex-direction: column;
-   margin-top: 100px;
-   margin-bottom: 50px;
- }
-  .cook-welcome >  h3, h4 {
-    margin-left:auto;
-    margin-right:auto;
-  }
-.patron-list {
-  display: flex;
-  justify-content: center;
-}
-.patron-list-column {
-  width: 300px;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-}
-.cooker-profile-home {
-  margin-left:auto;
-  margin-right:auto;
-  dipslay:flex;
-  width:300px;
-}
-  .photo-box {
-    border:3px solid black;
-    background-color: white;
-    display: flex;
-    flex-direction: column;
-  }
-    .photo-box > img {
-      width: 200px;
-      height: 200px;
-      border-radius: 50%;
-      border: 3px solid black;
-      cursor: pointer;
-      margin-top: 20px;
-      margin-left:auto;
-      margin-right:auto;
-    }
-    .photo-box > h3 {
-      margin-left:auto;
-      margin-right:auto;
-    }
-  .info-box {
-    display: flex;
-    flex-direction: column;
-    min-height: 300px;
-    border: 3px solid black;
-    justify-content: space-around;
-  }
-    .info-box > div {
-      font-size: 16px;
-      margin-left:auto;
-      margin-right:auto;
-    }
-    .food-description {
-      padding: 0px 10px;
-      font-style: italic;
-    }
-
-.editme {
-  display:flex;
-}
- .editme > .btn {
-   margin-left:auto;
-   margin-right:auto;
- }
-h2, h4 {
-  font-family: 'Josefin Sans', sans-serif;s
-}
-
-
-  .wrapper-cook-profile > div{
-    justify-content: center;
-    align-self: center;
-  }
-  .nested-profile-top {
-  }
-  .cook-photo-id {
-    background: white;
-    border-bottom: 3px solid black;
-  }
-  .cook-stats {
-    padding:1.5em;
-    display: flex;
-    flex-direction: column;
-  }
-  .about-cook {
-    font-style: italic;
-    padding:1.5em;
-    max-height: ;
-  }
-  .cook-name {
-    font-size: 24px;
-    text-align: center;
-    font-family: 'Josefin Sans', sans-serif;
-    color:black;
-  }
-  .cook-photo {
-    padding-top: 1em;
-  }
-  .cooker-img {
-    width: 12em;
-    height: 12em;
-    border-radius: 50%;
-    border: 3px solid black;
-    display: block;
-    margin-left:auto;
-    margin-right:auto;
-    cursor: pointer;
-  }
-
-  .field {
-    color: black;
-    padding: 5px;
-  }
-
-
-  .panel {
-    margin-top: 50px;
-    background: rgb(255, 216, 216);;
-  }
-  .cooker-sign-up {
-    background-color: rgb(212, 204, 217);
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-  }
-  .cooker-edit {
-    background-color: rgb(212, 204, 217);
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-  }
-  .account-settings {
-    background-color: rgb(212, 204, 217);
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-  }
-
-
-
-/* eater */
-
-.eater-home-head {
-  margin: 10em;
-  display: flex;
-  flex-direction: column;
-}
-
-  .eater-home-head h3 {
-    font-size: 2em;
-    margin-bottom: 1.5em;
-  }
-
-  .current-cook-container {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-
-  #curr-cook-details {
-    display: flex;
-    flex-direction: column;
-    width: 50%;
-    border:2px solid black;
-    padding: 3em;
-    background: #27033B;
-    color: white;
-    border-radius: 3%;
-  }
-
-  .cooker-home-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-  .cook-home-top {
-    margin-top: 150px;
-  }
-  #cook-id-block {
-    color: white;
-    background-color: black;
-  }
-  a {
-    cursor: pointer;
-
-  }
-
-  #cooker-profile {
-    margin: 3em;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-content: center;
-  }
-
-  #cook-name {
-    font-size: 24px;
-    text-align: center;
-    font-weight: bolder;
-    font-family: 'Josefin Sans', sans-serif;
-    color: black;
-  }
-
   #cook-info-eater {
     text-align: center;
   }
