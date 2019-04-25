@@ -1,8 +1,19 @@
 
 <body>
-  <div class='welcome-links'>
+  <div class='welcome-nav'>
     <div class="home-signup">
       <div id="sign-up-btn"><%= link_to 'Sign Up', new_user_registration_path, method: :get, class:"btn btn-light"%></div>
+    </div>
+    <div class="home-login">
+      <div id="login-btn"><%= link_to 'Login', new_user_session_path, method: :get, class:"btn btn-light"%></div>
+    </div>
+  </div>
+
+    <div class="welcome-head">
+      <div class='title-box'>
+          <div>SoupLady</div>
+          <h3>A community-driven approach to better food.</h3>
+      </div>
     </div>
     <div class="home-login">
       <div id="login-btn"><%= link_to 'Login', new_user_session_path, method: :get, class:"btn btn-light"%></div>
